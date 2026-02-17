@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system */
+  /* COLORS */
+  --background-color-button: #0062d1;
+  --heading-color: #0b3680;
+  --text-color: #252528;
+  --brand-color-primary: #ffc70f;
+  --brand-color-secondary: #0b3680;
+
+  --warning-color: #f05c01;
+  --success-color: #3e7f67;
+  --error-color: #ce092d;
+  /* HEADINGS */
+  --heading-1-web: 28px;
+  --heading-2-web: 24px;
+  --heading-3-web: 20px;
+  --heading-4-web: 18px;
+  --heading-5-web: 16px;
+
+  /* TEXT SIZE */
+  --body-text-large: 1.125rem;
+  --body-text-medium: 1rem;
+  --body-text-small: 0.875rem;
+  --body-text-x-small: 0.75rem;
+
+  --padding-insert: 16px;
+}
+
+/* Generieke code die herbruikbaar is */
+.hiddenBlock + div {
+  display: none;
+}
+.hiddenBlock:has([value="yes"]:checked) + div {
+  display: block;
+}
+
+/* tijdelijke code  */
+main,
+fieldset {
+  padding: 20px;
+}
+
+h1 {
+  font-size: var(--heading-1-web);
+  color: var(--warning-color);
+}

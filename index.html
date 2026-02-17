@@ -14,98 +14,124 @@
       <form action="">
         <fieldset>
           <legend>Pagina 1: Gegevens van de overledene</legend>
+
           <fieldset>
             <legend>Pagina 1a</legend>
             <fieldset>
               <legend>Vul hier de gegevens in van de overledene.</legend>
-              <label for="voornaam"> Voorletter(s) </label>
-              <input required type="text" name="naam" value="" id="voornaam" />
-              <label for="tussenvoegsel"> Tussenvoegsel(s) </label>
-              <input type="text" name="naam" value="" id="tussenvoegsel" />
-              <label for="achternaam"> Achternaam </label>
+              <label for="firstnameDeseased"> Voorletter(s) </label>
               <input
                 required
                 type="text"
-                name="naam"
+                name="firstnameDeseased"
                 value=""
-                id="achternaam"
+                id="firstnameDeseased"
+              />
+              <label for="tussenvoegsel"> Tussenvoegsel(s) </label>
+              <input
+                type="text"
+                name="SurnameDeseased"
+                value=""
+                id="tussenvoegsel"
+              />
+              <label for="SurnameDeseased"> Achternaam </label>
+              <input
+                required
+                type="text"
+                name="name"
+                value=""
+                id="SurnameDeseased"
               />
             </fieldset>
+
             <fieldset>
-              <label> Bsn overledene </label>
+              <label for="bsnDeseased"> Bsn overledene </label>
               <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number -->
               <!-- Het werkt nog niet helemaal  -->
               <input
                 required
                 type="text"
                 inputmode="numeric"
-                maxlength="8"
                 maxlength="9"
                 pattern="\d*"
-                name="bsn"
+                name="bsnDeseased"
+                id="bsnDeseased"
               />
-              <label for="Overlijdensdatum"> Overlijdensdatum </label>
-              <input type="date" id="Overlijdensdatum" />
+              <label for="DeseaseDate"> Overlijdensdatum </label>
+              <input type="date" id="DeseaseDate" name="DeseaseDate" />
             </fieldset>
           </fieldset>
+
+          <!-- VRAAG 1B -->
           <fieldset>
             <legend>Pagina 1b</legend>
-            <fieldset>
+
+            <fieldset class="hiddenBlock">
               <legend>
                 Was de overledene getrouwd of had de overledene een
                 geregistreerde partner op het moment van overlijden?
               </legend>
-              <label for="">
-                <input type="radio" name="geregistreerdePartner" />
+              <label>
+                <input type="radio" name="geregistreerdePartner" value="no" />
                 Nee. Ga verder met vraag 1c.
               </label>
-              <label for="">
-                <input type="radio" name="geregistreerdePartner" />
+              <label>
+                <input type="radio" name="geregistreerdePartner" value="yes" />
                 Ja.
               </label>
             </fieldset>
-            <fieldset>
-              <legend>
-                Hadden de overledene en diens echtgenoot of geregistreerde
-                partner huwelijkse of partnerschapsvoorwaarden laten vastleggen
-                in een notariële akte?
-              </legend>
-              <label for="">
-                <input type="radio" name="notarieleAkte" />
-                Nee. Ga verder met vraag 1c.
-              </label>
-              <label for="">
-                <input type="radio" name="notarieleAkte" />
-                Ja
-              </label>
-            </fieldset>
-            <fieldset>
-              <legend>
-                Hadden de overledene en diens partner een finaal verrekenbeding?
-              </legend>
-              <label for="">
-                <input type="radio" name="vakbeding" />
-                Nee
-              </label>
-              <label for="">
-                <input type="radio" name="vakbeding" />
-                Ja
-              </label>
-            </fieldset>
-            <label for="datumHuwelijk"
-              >Datum huwelijkse of partnerschapsvoorwaarden</label
-            >
-            <input type="date" id="datumHuwelijk" />
+
+            <div>
+              <fieldset class="hiddenBlock">
+                <legend>
+                  Hadden de overledene en diens echtgenoot of geregistreerde
+                  partner huwelijkse of partnerschapsvoorwaarden laten
+                  vastleggen in een notariële akte?
+                </legend>
+                <label>
+                  <input type="radio" name="notarieleAkte" value="no" />
+                  Nee. Ga verder met vraag 1c.
+                </label>
+                <label for="notarialDeedYes">
+                  <input type="radio" name="notarieleAkte" value="yes" />
+                  Ja
+                </label>
+              </fieldset>
+
+              <div>
+                <fieldset>
+                  <legend>
+                    Hadden de overledene en diens partner een finaal
+                    verrekenbeding?
+                  </legend>
+                  <label>
+                    <input type="radio" name="vakbeding" />
+                    Nee
+                  </label>
+                  <label>
+                    <input type="radio" name="vakbeding" />
+                    Ja
+                  </label>
+                </fieldset>
+
+                <label for="dateMarriage"
+                  >Datum huwelijkse of partnerschapsvoorwaarden</label
+                >
+                <input type="date" id="dateMarriage" />
+              </div>
+            </div>
           </fieldset>
+
+          <!-- VRAAG 1C -->
           <fieldset>
             <legend>Pagina 1c</legend>
             <fieldset>
               <legend>Had de overledene kinderen?</legend>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenKinderen" />
                 Nee. Ga verder met vraag 1d.
               </label>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenKinderen" />
                 Ja
               </label>
@@ -115,127 +141,137 @@
                 Is 1 van deze kinderen eerder overleden dan de overledene voor
                 wie u nu aangifte doet?
               </legend>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenKindAangifte" />
                 Nee. Ga verder met vraag 1d.
               </label>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenKindAangifte" />
                 Ja
               </label>
             </fieldset>
             <fieldset>
               <legend>Had dit overleden kind zelf kinderen?</legend>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenKindZelfKinderen" />
                 Nee.
               </label>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenKindZelfKinderen" />
                 Ja
               </label>
             </fieldset>
           </fieldset>
+
+          <!-- VRAAG 1D -->
           <fieldset>
             <legend>Pagina 1d</legend>
             <fieldset>
               <legend>Had de overledene een testament?</legend>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenTestament" />
                 Nee. Ga verder met vraag 2.
               </label>
-              <label for="">
+              <label>
                 <input type="radio" name="overledenTestament" />
                 Ja. Vul de gegevens in van de notaris die het testament heeft
                 opgemaakt en de datum van het testament.
               </label>
             </fieldset>
             <fieldset>
-              <label for="protocolnummerNotaris">Protocolnummer Notaris</label>
-              <input type="text" id="protocolnummerNotaris" />
+              <legend>Gegevens notaris overledene</legend>
+              <label for="protocolNumberNotary">Protocolnummer Notaris</label>
+              <input type="text" id="protocolNumberNotary" />
               <fieldset>
                 <legend>Vul hier de gegevens in van de overledene.</legend>
-                <label for="voornaamNotaris"> Voorletter(s) </label>
-                <input required type="text" name="naam" id="voornaamNotaris" />
-                <label for="tussenvoegselNotaris"> Tussenvoegsel(s) </label>
-                <input
-                  type="text"
-                  name="naam"
-                  value=""
-                  id="tussenvoegselNotaris"
-                />
-                <label for="achternaamNotaris"> Achternaam </label>
-                <input
-                  required
-                  type="text"
-                  name="naam"
-                  id="achternaamNotaris"
-                />
+                <label for="firstnameNotary"> Voorletter(s) </label>
+                <input required type="text" name="naam" id="firstnameNotary" />
+                <label for="prefixNotary"> Tussenvoegsel(s) </label>
+                <input type="text" name="naam" value="" id="prefixNotary" />
+                <label for="lastnameNotary"> Achternaam </label>
+                <input required type="text" name="naam" id="lastnameNotary" />
               </fieldset>
-              <label for="Vestigingsplaats">Vestigingsplaats</label>
-              <input type="text" name="" id="Vestigingsplaats" />
-              <label for="testamentLaatsteWijziging"
+              <label for="locationNotary">Vestigingsplaats</label>
+              <input type="text" name="" id="locationNotary" />
+              <label for="willLastAmendment"
                 >Datum van het testament of van de laatste wijziging
               </label>
-              <input type="date" name="" id="testamentLaatsteWijziging" />
+              <input type="date" name="" id="willLastAmendment" />
             </fieldset>
           </fieldset>
         </fieldset>
+
+        <!-- VRAAG 2 -->
         <fieldset>
           <legend>Gegevens gemachtigde</legend>
           <fieldset>
-            <label for="bsnGemachtigde">Bsn/RSIN gemachtigde</label>
+            <legend>
+              Vul 1 van de 3 in: BSN of RSIN van gemachtigde, het beconnummer
+              van de adviseur of het protocolnummer van de notaris.
+            </legend>
+            <label for="bsnAuthorizedPerson">Bsn/RSIN gemachtigde</label>
             <input
               type="text"
               maxlength="8"
               maxlength="9"
               name="bsnGemachtigde"
               inputmode="numeric"
+              id="bsnAuthorizedPerson"
             />
-            <label for="beconNummerAdviseur">Beconnummer adviseur</label>
-            <input type="text" name="beconNummerAdviseur" />
-            <label for="protocolnummerNotarisGemachtigde"
+            <label for="beconNumberAdvisor">Beconnummer adviseur</label>
+            <input
+              type="text"
+              name="beconNummerAdviseur"
+              id="beconNumberAdvisor"
+            />
+            <label for="protocolnumberNotaryAuthorizedPerson"
               >Protocolnummer notaris</label
             >
-            <input type="number" name="protocolnummerNotarisGemachtigde" />
+            <input
+              type="number"
+              name="protocolnummerNotarisGemachtigde"
+              id="protocolnumberNotaryAuthorizedPerson"
+            />
           </fieldset>
           <fieldset>
             <fieldset>
-              <label for="voornaamGemachtigde">
+              <label for="firstNameAutorizedPerson">
                 Voorletter(s) gemachtigde
               </label>
               <input
                 required
                 type="text"
-                name="naam"
-                id="voornaamGemachtigde"
+                name="voornaamGemachtigde"
+                id="firstNameAutorizedPerson"
               />
-              <label for="tussenvoegselGemachtigde">
+              <label for="prefixAuthorizedPerson">
                 Tussenvoegsel(s) gemachtigde
               </label>
               <input
                 type="text"
-                name="naam"
+                name="tussenvoegselsGemachtigde"
                 value=""
-                id="tussenvoegselGemachtigde"
+                id="prefixAuthorizedPerson"
               />
-              <label for="achternaamGemachtigde"> Achternaam gemachtigde</label>
+              <label for="lastnameAuthorizedPerson">
+                Achternaam gemachtigde</label
+              >
               <input
                 required
                 type="text"
-                name="naam"
-                id="achternaamGemachtigde"
+                name="achternaamGemachtigde"
+                id="lastnameAuthorizedPerson"
               />
             </fieldset>
             <fieldset>
               <legend>
                 Bent u ingeschreven op een adres binnen of buitenland?
               </legend>
-              <label for="">
+              <label>
                 <input type="radio" />
                 Adres in Nederland
               </label>
-              <label for="">
+              <label>
                 <input type="radio" />
                 Adres in buitenland
               </label>
@@ -243,45 +279,96 @@
             <fieldset>
               <legend>Adres in Nederland</legend>
               <fieldset>
-                <label for="straatNaamGemachtigde">Straat</label>
-                <input type="text" name="straatNaamGemachtigde" />
-                <label for="huisnummergemachtigde">Huisnummer</label>
-                <input type="number" name="huisnummergemachtigde" />
-                <label for="toevoegingAdresGemachtigde">Toevoegingen</label>
-                <input type="text" name="toevoegingAdresGemachtigde" />
-              </fieldset>
-              <fieldset>
-                <label for="postcodeGemachtigde">Postcode</label>
-                <input type="text" name="postcodeGemachtigde" />
-                <label for="plaatsGemachtigde">Woonplaats</label>
-                <input type="text" name="plaatsGemachtigde" />
+                <legend>Vul de gegevens in als je in Nederland woont</legend>
+                <label for="streetNameAuthorizedPerson">Straat</label>
+                <input
+                  type="text"
+                  name="straatNaamGemachtigde"
+                  id="streetNameAuthorizedPerson"
+                />
+                <label for="houseNumberAuthorizedPerson">Huisnummer</label>
+                <input
+                  type="number"
+                  name="huisnummergemachtigde"
+                  id="houseNumberAuthorizedPerson"
+                />
+                <label for="additionalAdressAuthorizedPerson"
+                  >Toevoegingen</label
+                >
+                <input
+                  type="text"
+                  name="toevoegingAdresGemachtigde"
+                  id="additionalAdressAuthorizedPerson"
+                />
+                <label for="postalcodeAuthorizedPerson">Postcode</label>
+                <input
+                  type="text"
+                  name="postcodeGemachtigde"
+                  id="postalcodeAuthorizedPerson"
+                />
+                <label for="locationAuthorizedPerson">Woonplaats</label>
+                <input
+                  type="text"
+                  name="plaatsGemachtigde"
+                  id="locationAuthorizedPerson"
+                />
               </fieldset>
             </fieldset>
             <fieldset>
               <legend>Adres in Buitenland</legend>
               <fieldset>
-                <label for="straatNaamGemachtigdeBuitenland">Straat</label>
-                <input type="text" name="straatNaamGemachtigdeBuitenland" />
-                <label for="huisnummergemachtigdeBuitenland">Huisnummer</label>
-                <input type="number" name="huisnummergemachtigdeBuitenland" />
+                <legend>Vul de gegevens in als je in Buitenland woont</legend>
+                <label for="streetNameAuthorizedPersonAbroad">Straat</label>
+                <input
+                  type="text"
+                  name="straatNaamGemachtigdeBuitenland"
+                  id="streetNameAuthorizedPersonAbroad"
+                />
+                <label for="housenumberAuthorizedAbroad">Huisnummer</label>
+                <input
+                  type="number"
+                  name="huisnummergemachtigdeBuitenland"
+                  id="housenumberAuthorizedAbroad"
+                />
+
+                <label for="postcodeAuthorizedAbroad">Postcode</label>
+                <input
+                  type="text"
+                  name="postcodeGemachtigdeBuitenland"
+                  id="postcodeAuthorizedAbroad"
+                />
+                <label for="locationAuthorizedPersonAbroad">plaats</label>
+                <input
+                  type="text"
+                  name="plaatsGemachtigdeBuitenland"
+                  id="locationAuthorizedPersonAbroad"
+                />
+                <label for="landcodeAuthorizedPersonAbroad">Toevoegingen</label>
+                <input
+                  type="number"
+                  name="landcodeGemachtigde"
+                  id="landcodeAuthorizedPersonAbroad"
+                />
               </fieldset>
-              <fieldset>
-                <label for="postcodeGemachtigdeBuitenland">Postcode</label>
-                <input type="text" name="postcodeGemachtigdeBuitenland" />
-                <label for="plaatsGemachtigdeBuitenland">plaats</label>
-                <input type="text" name="plaatsGemachtigdeBuitenland" />
-                <label for="landcodeGemachtigde">Toevoegingen</label>
-                <input type="number" name="landcodeGemachtigde" />
-              </fieldset>
-              <label for="telefoonNummerGemachtigde">Telefoonnummer</label>
-              <input type="tel" name="telefoonNummerGemachtigde" />
-              <label for="emailadresGemachtigde">E-mailadress</label>
-              <input type="email" name="emailadresGemachtigde" />
+              <label for="telnumberAuthorizedPerson">Telefoonnummer</label>
+              <input
+                type="tel"
+                name="telefoonNummerGemachtigde"
+                id="telnumberAuthorizedPerson"
+              />
+              <label for="emailadresAuthorizedPerson">E-mailadress</label>
+              <input
+                type="email"
+                name="emailadresGemachtigde"
+                id="emailadresAuthorizedPerson"
+              />
             </fieldset>
           </fieldset>
         </fieldset>
+        <button>submit</button>
       </form>
     </main>
     <footer></footer>
+    <script src="script.js"></script>
   </body>
 </html>
