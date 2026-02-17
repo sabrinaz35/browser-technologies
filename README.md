@@ -71,8 +71,7 @@ Morgen wil ik de input fields meer specificeren en alvast nadenken hoe ik dat da
 
 
 ## Daily checkout 2: 17 februari
-
-Samen met romy
+Samen met romy besproken hoe zij haar javascript heeft gewerkt vandaag, en een max datum op vandaag bij sterfdatum heeft gedaan.
 
 ### Wat heb je vandaag gedaan?
 Vandaag hebben we de weekly geek behandeld aan de hand van een wooclap, daaruit heb ik geleerd dat het toch handig is om je bronnen te checken ook en dat heb ik een beetje gemist.
@@ -104,6 +103,7 @@ Uiteindelijk heb ik samen met Sanne gekeken naar de javascript en heb ik het vol
 ### Wat ga je morgen doen?/Na de vakantie
 - Na de vakantie of vrijdag wil ik gaan werken aan de vormgeving en daar stappen in zetten.
 - Ook wil ik de generieke code op andere plekken implementeren.
+- En kijken voor het toevoegen van de lettertype en kijken welke fallback er het beste bij past.
 
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
