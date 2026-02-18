@@ -111,7 +111,10 @@ Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
 Design system NS: 
 https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system 
 
-Geraadpleegde site:
+Voor html inputs:
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input 
+
+Geraadpleegde site voor Javascript:
 - https://stackoverflow.com/questions/9887360/how-can-i-check-if-a-checkbox-is-checked 
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling  
