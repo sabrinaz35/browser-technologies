@@ -108,8 +108,10 @@ Uiteindelijk heb ik samen met Sanne gekeken naar de javascript en heb ik het vol
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
 
-Design system NS: 
+Design system NS en fonts: 
 https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system 
+
+https://www.ns.nl/
 
 Voor html inputs:
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input 
