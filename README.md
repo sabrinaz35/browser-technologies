@@ -105,6 +105,26 @@ Uiteindelijk heb ik samen met Sanne gekeken naar de javascript en heb ik het vol
 - Ook wil ik de generieke code op andere plekken implementeren.
 - En kijken voor het toevoegen van de lettertype en kijken welke fallback er het beste bij past.
 
+### Wekelijkse reflectie 20 februari
+Deze week hebben we de kick-off gehad van bt en hebben wij de eerste stappen gezet naar een web formulier op basis van de erfbelasting aangifte.
+
+Op de maandag ben ik daarom bezig geweest met het doorgronden van het formulier en de dinsdag heb ik stappen gezet in wat functionaliteiten voor het in en uit laten klappen van de vragen en deze te resetten als ze ingeklapt zijn. Ik heb ook voor een deel de :root gevuld met kleuren vanuit de styleguide van de ns.
+
+De js voor de functionaliteit van het resetten verliep niet helemaal goed, ik was eerst begonnen met het zelf schrijven, maar ik raakte al gauw kwijt welk element ik moest hebben en waar ik dan naar moest kijken en welke syntaxen ik nodig heb om te kunnen krijgen wat ik wilde. Uiteindelijk was het gelukt via chatgpt, maar ik begreep daar niks van en heb de code weggegooid en ben naar Sanne gegaan (die was toen beschikbaar) om te vragen hoe ik dit moest aanpakken en zo heb ik uiteindelijk de functie geschreven die ik nu heb.
+
+Wat wel goed was tijdens de eerste stappen was dat Lisa printjes had gemaakt van de eerste pagina's, dit maakte het voor mij al veel makkelijker om de elementen te verdelen en voor mijzelf een overzicht erin te krijgen. In het vervolg moet ik dit gewoon gaan uittekenen voor andere projecten, ik doe het nu ook voor CSS en het werkt ontzettend fijn.
+<img src="/readme-images/aantekeningen-1.jpeg" alt="De gemaakte aantekeningen" width="300px">
+<img src="/readme-images/aantekeningen-2.jpeg" alt="De gemaakte aantekeningen" width="300px">
+
+
+Uiteindelijk hadden we op vrijdag het feedback gesprek, voorafgaand daaraan had ik typografie toegevoegd en alvast wat kleuren aan de headers gegeven. Tijdens dit gesprek kreeg ik de feedback dat ik wel wat Fieldsets weg kon laten, omdat die eigenlijk overbodig zijn en sommige hadden ook geen legend en dat kan niet.
+
+<img src="/readme-images/tussenstand-20-feb.png" alt="Tussenstand hoe de website er vandaag de dag uitziet" width="300px">
+
+Ik ben blij met wat ik tot nu bereikt heb in dit project en de vervolg stappen die ik wil gaan zetten zijn de vormgeving fixen, de gekregen feedback verwerken en extra functionaliteiten toevoegen, zoals een max datum enzo. Zodat ik daarmee weer javascript kan gebruiken voor mijn leerdoel.
+
+Gesproken over mijn leerdoel, ik merk dat ik door dat stuk code met Sanne te hebben geschreven al wel beter snap hoe javascript in elkaar zit en dat het ook steeds makkelijker gaan met het noteren, maar het vergt nog ontwikkeling en oefening.
+
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
 
