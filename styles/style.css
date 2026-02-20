@@ -15,6 +15,7 @@
   --warning-color: #f05c01;
   --success-color: #3e7f67;
   --error-color: #ce092d;
+
   /* HEADINGS */
   --heading-1-web: 28px;
   --heading-2-web: 24px;
@@ -29,15 +30,46 @@
   --body-text-x-small: 0.75rem;
 
   --padding-insert: 16px;
+
+  /* BORDER-RADIUS */
+  --border-radius-small: 3px;
+  --border-radius-default: 6px;
+  --border-radius-large: 12px;
+
 }
 
+@font-face {
+  font-family: nssans-bold;
+  src: url(/fonts/nssans-bold.woff2);
+}
+
+
+/**************************************/
 /* Generieke code die herbruikbaar is */
+/**************************************/
 .hiddenBlock + div {
   display: none;
 }
 .hiddenBlock:has([value="yes"]:checked) + div {
   display: block;
 }
+
+
+/**************************************/
+/*          Algemene styling          */
+/**************************************/
+
+fieldset:first-child {
+  /* border:none; */
+  border-radius: var(--border-radius-default);
+}
+
+legend {
+  /* haalt de legend uit de border */
+  /* float: left; */
+  font-family: nssans-bold;
+}
+
 
 /* tijdelijke code  */
 main,
