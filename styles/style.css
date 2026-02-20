@@ -38,6 +38,18 @@
 
 }
 
+
+/**************************************/
+/*                fonts               */
+/**************************************/
+
+
+@font-face {
+  font-family: nssans;
+  src: url(/fonts/nssans-regular.woff2);
+}
+
+
 @font-face {
   font-family: nssans-bold;
   src: url(/fonts/nssans-bold.woff2);
@@ -58,26 +70,36 @@
 /**************************************/
 /*          Algemene styling          */
 /**************************************/
+body {
+  font-family: nssans, sans-serif;
+  padding: 20px;
 
-fieldset:first-child {
+}
+
+fieldset {
+  padding: 20px;
+
+  &:first-child {
   /* border:none; */
   border-radius: var(--border-radius-default);
+}
 }
 
 legend {
   /* haalt de legend uit de border */
   /* float: left; */
-  font-family: nssans-bold;
+  font-family: nssans-bold, sans-serif;
+  color: var(--heading-color);
 }
 
-
-/* tijdelijke code  */
-main,
-fieldset {
-  padding: 20px;
-}
 
 h1 {
   font-size: var(--heading-1-web);
   color: var(--warning-color);
 }
+
+
+
+
+
+
