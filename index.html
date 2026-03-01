@@ -8,21 +8,22 @@
   </head>
   <body>
     <header>
-      <h1>Dit is voor een schoolproject!!</h1>
+      <p>Dit is voor een schoolproject!!</p>
+      <h1>Aangifte erfbelasting</h1>
     </header>
     <main>
       <form action="">
 
          <!-- VRAAG 1-->
         <fieldset>
-          <legend>Gegevens van de overledene</legend>
+          <legend>Gegevens overledene</legend>
           <!-- https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system  -->
           
           <!-- Vraag 1a -->
           <fieldset>
-            <legend>Pagina 1a</legend>
-            <fieldset>
-              <legend>Vul hier de gegevens in van de overledene.</legend>
+            <legend>Persoonsgegevens overledene </legend>
+            <div>
+              <legend>Deze moet weg</legend>
               <label for="firstnameDeseased"> Voorletter(s) </label>
               <input
                 required
@@ -46,9 +47,9 @@
                 value=""
                 id="SurnameDeseased"
               />
-            </fieldset>
+            </div>
 
-            <fieldset>
+            <div>
               <label for="bsnDeseased"> Bsn overledene </label>
               <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number -->
               <!-- Het werkt nog niet helemaal  -->
@@ -63,12 +64,12 @@
               />
               <label for="DeseaseDate"> Overlijdensdatum </label>
               <input type="date" id="DeseaseDate" name="DeseaseDate" />
-            </fieldset>
+            </div>
           </fieldset>
 
           <!-- VRAAG 1B -->
           <fieldset>
-            <legend>Pagina 1b</legend>
+            <legend>Huw status van overledene</legend>
 
             <fieldset class="hiddenBlock">
               <legend>
@@ -128,7 +129,7 @@
 
           <!-- VRAAG 1C -->
           <fieldset>
-            <legend>Pagina 1c</legend>
+            <legend>Nakomelingen van overledene</legend>
             <fieldset>
               <legend>Had de overledene kinderen?</legend>
               <label>
@@ -169,7 +170,7 @@
 
           <!-- VRAAG 1D -->
           <fieldset>
-            <legend>Pagina 1d</legend>
+            <legend>Testament van overledene</legend>
             <fieldset>
               <legend>Had de overledene een testament?</legend>
               <label>
@@ -210,9 +211,12 @@
           <legend>Gegevens gemachtigde</legend>
           <fieldset>
             <legend>
+              Persoonsgegevens gemachtigde
+            </legend>
+            <p>
               Vul 1 van de 3 in: BSN of RSIN van gemachtigde, het beconnummer
               van de adviseur of het protocolnummer van de notaris.
-            </legend>
+            </p>
             <label for="bsnAuthorizedPerson">Bsn/RSIN gemachtigde</label>
             <input
               type="text"
@@ -236,10 +240,9 @@
               name="protocolnummerNotarisGemachtigde"
               id="protocolnumberNotaryAuthorizedPerson"
             />
-          </fieldset>
-          <fieldset>
-            <fieldset>
-              <label for="firstNameAutorizedPerson">
+
+            <div>
+                <label for="firstNameAutorizedPerson">
                 Voorletter(s) gemachtigde
               </label>
               <input
@@ -266,12 +269,13 @@
                 name="achternaamGemachtigde"
                 id="lastnameAuthorizedPerson"
               />
-            </fieldset>
-            <fieldset>
-              <legend>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>
                 Bent u ingeschreven op een adres binnen of buitenland?
-              </legend>
-              <label>
+            </legend>
+            <label>
                 <input type="radio" />
                 Adres in Nederland
               </label>
@@ -279,8 +283,8 @@
                 <input type="radio" />
                 Adres in buitenland
               </label>
-            </fieldset>
-            <fieldset>
+          </fieldset>
+          <fieldset>
               <legend>Adres in Nederland</legend>
               <fieldset>
                 <legend>Vul de gegevens in als je in Nederland woont</legend>
