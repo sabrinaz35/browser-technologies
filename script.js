@@ -73,6 +73,10 @@ function setCurrentDateToPicker(){
     let calender = document.querySelector('[type="date"]');
     
     const today = new Date();
+    
+    // const pastDate = new Date(today);
+    // pastDate.setMonth(pastDate.getMonth() - 8)
+
 
     // De split zorgt ervoor dat er geen tijd wordt laten zien
     // https://stackoverflow.com/questions/25159330/how-to-convert-an-iso-date-to-the-date-format-yyyy-mm-dd

@@ -148,7 +148,7 @@ Werkt het hetzelfde met een screenreader:
 - Nee, je hebt bij een link attributen die ervoor zorgen dat het voorgelezen wordt dat het uberhaupt een link is en dat het dan ook als je op enter drukt op een andere pagina opent. Misschien kan het via een omweg wel, maar dat weet ik niet zeker, misschien moet je elke element een attribute geven via js.
 
 #### Daily checkout 2 maart 2026
-Samen met thomas 
+Samen met thomas, we hebben het even gehad over de progressive disclosure die wij beid hebben gemaakt en op welke manieren wij dit dan hebben gedaan.
 
 
 ##### Wat heb je vandaag gedaan?
