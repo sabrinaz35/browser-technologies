@@ -21,6 +21,9 @@
   --success-color: #3e7f67;
   --error-color: #ce092d;
 
+  /* HOVER COLORS */
+
+
   /* HEADINGS */
   --heading-1-web: 28px;
   --heading-2-web: 24px;
@@ -41,11 +44,16 @@
   --border-radius-default: 6px;
   --border-radius-large: 12px;
 
+    /* SPACING */
+  --spacing-inset-m: 16px;
+  --spacing-gap-s: 8px;
+  --spacing-gap-m: 24px;
+
 }
 
 
 /**************************************/
-/*                fonts               */
+/*               MARK: fonts          */
 /**************************************/
 
 
@@ -68,34 +76,50 @@
 /**************************************/
 .hiddenBlock + div {
   display: none;
+
 }
+
 .hiddenBlock:has([value="yes"]:checked) + div {
   display: block;
 }
 
 
 /**************************************/
-/*          Algemene styling          */
+/*          MARK: Algemene styling    */
 /**************************************/
 body {
   font-family: nssans, sans-serif;
-  padding: 20px;
   background-color: var(--background-color-elevated-sunken) ;
-
 }
 
 header {
   background-color: var(--background-color-brand-primary);
+  padding: var(--spacing-inset-m);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+    & > fieldset {
+    border-radius: var(--border-radius-default);
+    margin: var(--spacing-gap-m);
+    padding: var(--spacing-inset-m);
+
+      & > legend {
+        font-size: var(--heading-2-web);
+      }
+  }
 }
 
 fieldset {
-  padding: 20px;
   background-color: var(--background-color-default);
-
-  &:first-child {
   border:none;
-  border-radius: var(--border-radius-default);
-}
+  margin: var(--spacing-gap-m) 0;
+
+  & fieldset legend {
+    font-size: var(--body-text-medium);
+  }
 }
 
 legend {
@@ -103,6 +127,8 @@ legend {
   /* float: left; */
   font-family: nssans-bold, sans-serif;
   color: var(--heading-color);
+  font-size: var(--body-text-small);
+
 }
 
 h1 {
@@ -111,6 +137,28 @@ h1 {
   font-family: nssans-bold, sans-serif;
 }
 
+[class="heading"] {
+  font-size: var(--heading-3-web);
+}
+
+label{
+  color: var(--heading-color);
+  display: block;
+  padding-top: var(--padding-insert);
+}
+
+button {
+  border: none;
+  background-color: var(--background-color-button);
+  border-radius: var(--border-radius-default);
+  color: var(--background-color-default);
+  font-family: nssans-bold, sans-serif;
+  padding: var(--padding-insert);
+  
+  width: 10rem;
+  align-self: center;
+
+}
 
 /* De warning tekst */
 header {
@@ -121,6 +169,24 @@ header {
   color: var(--warning-color);
 }
 }
+
+
+/**************************************/
+/*   MARK: Specifieke input styling   */
+/**************************************/
+
+[type="file"] button {
+  background-color: var(--background-color-button);
+}
+
+
+
+
+/**************************************/
+/*   MARK: Invalid en valid styling   */
+/**************************************/
+
+
 
 
 

@@ -21,9 +21,8 @@
           
           <!-- Vraag 1a -->
           <fieldset>
-            <legend>Persoonsgegevens overledene </legend>
+            <legend class="heading">Persoonsgegevens overledene </legend>
             <div>
-              <legend>Deze moet weg</legend>
               <label for="firstnameDeseased"> Voorletter(s) </label>
               <input
                 required
@@ -34,6 +33,7 @@
               />
               <label for="tussenvoegsel"> Tussenvoegsel(s) </label>
               <input
+                required
                 type="text"
                 name="SurnameDeseased"
                 value=""
@@ -63,13 +63,20 @@
                 id="bsnDeseased"
               />
               <label for="DeseaseDate"> Overlijdensdatum </label>
-              <input type="date" id="DeseaseDate" name="DeseaseDate" />
+              <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date -->
+              <input 
+              type="date" 
+              id="DeseaseDate" 
+              name="DeseaseDate" 
+              value="2026-03-02"
+              min="2025-08-02"
+              />
             </div>
           </fieldset>
 
-          <!-- VRAAG 1B -->
+          <!-- Huw status van overledene -->
           <fieldset>
-            <legend>Huw status van overledene</legend>
+            <legend class="heading">Huwlijkse staat van overledene</legend>
 
             <fieldset class="hiddenBlock">
               <legend>
@@ -101,7 +108,10 @@
                   <input type="radio" name="notarieleAkte" value="yes" />
                   Ja
                 </label>
+                <label for="inputAkte">Voeg hier uw  notariële akte toe</label>
+                <input id="inputAkte" type="file">
               </fieldset>
+  
 
               <div>
                 <fieldset>
@@ -122,87 +132,93 @@
                 <label for="dateMarriage"
                   >Datum huwelijkse of partnerschapsvoorwaarden</label
                 >
-                <input type="date" id="dateMarriage" />
+                <input type="date" id="dateMarriage" value="2026-03-02"/>
               </div>
             </div>
           </fieldset>
 
-          <!-- VRAAG 1C -->
+          <!-- Nakomelingen overledenen -->
           <fieldset>
-            <legend>Nakomelingen van overledene</legend>
-            <fieldset>
+            <legend class="heading">Nakomelingen van overledene</legend>
+            <fieldset class="hiddenBlock">
               <legend>Had de overledene kinderen?</legend>
               <label>
-                <input type="radio" name="overledenKinderen" />
+                <input type="radio" name="overledenKinderen" value="no"/>
                 Nee. Ga verder met vraag 1d.
               </label>
               <label>
-                <input type="radio" name="overledenKinderen" />
+                <input type="radio" name="overledenKinderen" value="yes"/>
                 Ja
               </label>
             </fieldset>
-            <fieldset>
-              <legend>
+
+            <div>
+              <fieldset class="hiddenBlock">
+                <legend>
                 Is 1 van deze kinderen eerder overleden dan de overledene voor
                 wie u nu aangifte doet?
-              </legend>
-              <label>
-                <input type="radio" name="overledenKindAangifte" />
-                Nee. Ga verder met vraag 1d.
-              </label>
-              <label>
-                <input type="radio" name="overledenKindAangifte" />
-                Ja
-              </label>
-            </fieldset>
-            <fieldset>
-              <legend>Had dit overleden kind zelf kinderen?</legend>
-              <label>
-                <input type="radio" name="overledenKindZelfKinderen" />
-                Nee.
-              </label>
-              <label>
-                <input type="radio" name="overledenKindZelfKinderen" />
-                Ja
-              </label>
-            </fieldset>
+                 </legend>
+                  <label>
+                    <input type="radio" name="overledenKindAangifte" value="no"/>
+                    Nee. Ga verder met vraag 1d.
+                  </label>
+                  <label>
+                    <input type="radio" name="overledenKindAangifte" value="yes"/>
+                    Ja
+                  </label>
+              </fieldset>
+
+              <div>
+                <fieldset class="hiddenBlock" >
+                  <legend>Had dit overleden kind zelf kinderen?</legend>
+                  <label>
+                    <input type="radio" name="overledenKindZelfKinderen" value="no"/>
+                    Nee.
+                  </label>
+                  <label>
+                    <input type="radio" name="overledenKindZelfKinderen" value="yes"/>
+                    Ja
+                  </label>
+                </fieldset>
+              </div>
+            </div>
           </fieldset>
 
-          <!-- VRAAG 1D -->
+          <!-- TESTAMENT VAN OVERLEDENE -->
           <fieldset>
-            <legend>Testament van overledene</legend>
-            <fieldset>
+            <legend class="heading">Testament van overledene</legend>
+            <fieldset class="hiddenBlock">
               <legend>Had de overledene een testament?</legend>
               <label>
-                <input type="radio" name="overledenTestament" />
+                <input type="radio" name="overledenTestament" value="no"/>
                 Nee. Ga verder met vraag 2.
               </label>
               <label>
-                <input type="radio" name="overledenTestament" />
+                <input type="radio" name="overledenTestament" value="yes"/>
                 Ja. Vul de gegevens in van de notaris die het testament heeft
                 opgemaakt en de datum van het testament.
               </label>
             </fieldset>
-            <fieldset>
-              <legend>Gegevens notaris overledene</legend>
-              <label for="protocolNumberNotary">Protocolnummer Notaris</label>
-              <input type="text" id="protocolNumberNotary" />
+
+            <div>
               <fieldset>
-                <legend>Vul hier de gegevens in van de overledene.</legend>
+                <legend>Gegevens notaris overledene</legend>
+                <label for="protocolNumberNotary">Protocolnummer Notaris</label>
+                <input type="text" id="protocolNumberNotary" />
                 <label for="firstnameNotary"> Voorletter(s) </label>
                 <input required type="text" name="naam" id="firstnameNotary" />
                 <label for="prefixNotary"> Tussenvoegsel(s) </label>
                 <input type="text" name="naam" value="" id="prefixNotary" />
                 <label for="lastnameNotary"> Achternaam </label>
                 <input required type="text" name="naam" id="lastnameNotary" />
+                <label for="locationNotary">Vestigingsplaats</label>
+                <input type="text" name="" id="locationNotary" />
+                <label for="willLastAmendment"
+                  >Datum van het testament of van de laatste wijziging
+                </label>
+                <input type="date" name="" id="willLastAmendment" value="2026-03-02"/>
               </fieldset>
-              <label for="locationNotary">Vestigingsplaats</label>
-              <input type="text" name="" id="locationNotary" />
-              <label for="willLastAmendment"
-                >Datum van het testament of van de laatste wijziging
-              </label>
-              <input type="date" name="" id="willLastAmendment" />
-            </fieldset>
+            </div>
           </fieldset>
         </fieldset>
 
@@ -210,7 +226,7 @@
         <fieldset>
           <legend>Gegevens gemachtigde</legend>
           <fieldset>
-            <legend>
+            <legend class="heading">
               Persoonsgegevens gemachtigde
             </legend>
             <p>
@@ -296,7 +312,7 @@
                 />
                 <label for="houseNumberAuthorizedPerson">Huisnummer</label>
                 <input
-                  type="number"
+                  type="text"
                   name="huisnummergemachtigde"
                   id="houseNumberAuthorizedPerson"
                 />
@@ -309,7 +325,9 @@
                   id="additionalAdressAuthorizedPerson"
                 />
                 <label for="postalcodeAuthorizedPerson">Postcode</label>
+               <!-- https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code -->
                 <input
+                  pattern="[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$"
                   type="text"
                   name="postcodeGemachtigde"
                   id="postalcodeAuthorizedPerson"
@@ -334,7 +352,7 @@
                 />
                 <label for="housenumberAuthorizedAbroad">Huisnummer</label>
                 <input
-                  type="number"
+                  type="text"
                   name="huisnummergemachtigdeBuitenland"
                   id="housenumberAuthorizedAbroad"
                 />

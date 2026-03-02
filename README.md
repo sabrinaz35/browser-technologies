@@ -1,6 +1,7 @@
 # browser-technologies
 
-## Weekly Geek aantekeningen
+## Week 1
+### Weekly Geek aantekeningen
 https://tonsky.me/blog/tahoe-icons/
 
 - "The behaviors should be limited & don't overload the user with complex icons" Interessant en logisch
@@ -70,10 +71,10 @@ Morgen wil ik de input fields meer specificeren en alvast nadenken hoe ik dat da
 
 
 
-## Daily checkout 2: 17 februari
+#### Daily checkout 2: 17 februari
 Samen met romy besproken hoe zij haar javascript heeft gewerkt vandaag, en een max datum op vandaag bij sterfdatum heeft gedaan.
 
-### Wat heb je vandaag gedaan?
+##### Wat heb je vandaag gedaan?
 Vandaag hebben we de weekly geek behandeld aan de hand van een wooclap, daaruit heb ik geleerd dat het toch handig is om je bronnen te checken ook en dat heb ik een beetje gemist.
 Ik denk dat ik een extra leerdoel moet toevoegen en dan eigenlijk de css selectors meer leren.
 
@@ -85,7 +86,7 @@ Dus nu heb ik het heel makkelijk met hulp van Vasilis opgelost met css. Die sele
 Uiteindelijk heb ik samen met Sanne gekeken naar de javascript en heb ik het volgende in mijn javascript staan:
 <img src="/readme-images/js-17-februari.png" alt="Probeersel javascript 17feb" width="300px">
 
-### Hoelang heeft dat geduurt?
+##### Hoelang heeft dat geduurt?
 
 - 09:30 - 10:45 kick-off met wooclap
 - 10:45 - 12:00 Workshop html
@@ -95,12 +96,12 @@ Uiteindelijk heb ik samen met Sanne gekeken naar de javascript en heb ik het vol
 - 16:00 -  checkout
 
 
-### Wat heb je vandaag geleerd?
+##### Wat heb je vandaag geleerd?
 - Dat het belangrijk is om ook verder te kijken naar de bron van een artikel. 
 - Ik ben weer een stapje verder gekomen met het zelf schrijven van een function, ik heb het dit keer wel weer met hulp gedaan, maar ik snap nu wel weer beter wat ik moet doen.
 - Ik heb geleerd wat een + betekent in css dit is de volgende ... in de rij.
 
-### Wat ga je morgen doen?/Na de vakantie
+##### Wat ga je morgen doen?/Na de vakantie
 - Na de vakantie of vrijdag wil ik gaan werken aan de vormgeving en daar stappen in zetten.
 - Ook wil ik de generieke code op andere plekken implementeren.
 - En kijken voor het toevoegen van de lettertype en kijken welke fallback er het beste bij past.
@@ -125,6 +126,69 @@ Ik ben blij met wat ik tot nu bereikt heb in dit project en de vervolg stappen d
 
 Gesproken over mijn leerdoel, ik merk dat ik door dat stuk code met Sanne te hebben geschreven al wel beter snap hoe javascript in elkaar zit en dat het ook steeds makkelijker gaan met het noteren, maar het vergt nog ontwikkeling en oefening.
 
+
+## Week 2
+### Maandag
+#### Weekly Geek voorbereiding
+Het lijkt erop dat links en anchor attribute wel redelijk makkelijk om na te maken zijn, maar ik ben bang dat het stukje toegankelijkheid nog best wel lastig gaat worden. 
+
+Html: 
+- Voor de html zou je een div nodig hebben en een mogelijkheid om de link erin te zetten, maar misschien is dat ook mogelijk via javascript
+
+Css: 
+- Css heb je echt nodig voor de styling bij de link een underscore en bij de a als je er een button van wilt maken de styling van een button
+
+Javascript: 
+- Met javascript moet je er een eventlistener aan toevoegen, en ik weet niet of je die link er daaraan kan toevoegen. 
+
+Hoe het werkt op andere elementen:
+- Dat weet ik niet ik denk dat het dan op laptop wat toegankelijker werkt omdat je daar ook een hover kan gebruiken.
+
+Werkt het hetzelfde met een screenreader:
+- Nee, je hebt bij een link attributen die ervoor zorgen dat het voorgelezen wordt dat het uberhaupt een link is en dat het dan ook als je op enter drukt op een andere pagina opent. Misschien kan het via een omweg wel, maar dat weet ik niet zeker, misschien moet je elke element een attribute geven via js.
+
+#### Daily checkout 2 maart 2026
+Samen met thomas 
+
+
+##### Wat heb je vandaag gedaan?
+Ik heb vandaag een pattern toegevoegd bij de postcode en de styling van de form een beetje aangepakt.
+
+Ook heb ik vorige week aan de eerste pattern gewerkt, waar ik uiteindelijk gekozen heb voor ga verder met vraag:
+Ik had in eerste instantie alles onder elkaar in het bestand gezet. Uiteindelijk heb ik de progressive disclosure gekozen. Ik heb erover nagedacht en geprobeerd te een schets te maken voor een andere manier, om per stap de vragen te voorschijn te laten komen. Maar daar liep ik ertegenaan dat je dan maar een vraag ziet, en dan niet goed weet wat er nog gaat komen. 
+
+Dus daarom ben ik toch door gegaan met deze manier, zodat de gebruiker eventueel verder kan kijken en al kan zien wat er te wachten staat.
+
+<img src="/readme-images/schets-progressive-disclosure.jpeg" alt="Tussenstand hoe de website er vandaag de dag uitziet" width="300px">
+
+Maar ik kom er nu achter dat als de vragen uitgeklapt zijn dat ze pas op dat moment required moeten worden, want anders blijven ze required en kan je de hele form niet inleveren.
+
+<img src="/readme-images/add-required-js.png" alt="Nieuwe functie geschreven toevoegen required attribute" width="300px">
+
+Voor de tweede pattern wil ik proberen de date pikkers onder handen te nemen en mij daarin te verdiepen. Als eerste heb ik de mogelijkheid bekeken van de value die er standaard in komt te staan en de min en max date, want de datum kan niet na vandaag ingevuld worden.
+<img src="/readme-images/date-picker-deseased.png" alt="date picker in html met value en min max toegevoegd" width="300px">
+
+<img src="/readme-images/date-picker-visual.png" alt="Afbeelding hoe de code er in de browser eruit ziet." width="300px">
+
+<img src="/readme-images/update-2-3-2026.png" alt="Tussenstand hoe de website er vandaag de dag uitziet" width="300px">
+
+
+##### Hoelang heeft dat geduurt?
+- 09:30 - 11:00 In de ochten heb ik een workshop gevolgd
+- 11:00 - 12:00 Verder werken aan de vormgeving van mijn site 
+- 12:00 - 13:00 beetje van alles wat, plus pauze
+- 13:00 - 13:45 uitleg weekly geek
+- 13:45 - 15:00 verder gewerkt aan required functie en de date van vandaag in de date picker gezet.
+- 15:00 -16:00 weekly geek voorbereid en ingelezen.
+
+##### Wat heb je vandaag geleerd? 
+Ik heb geleerd hoe je op verschillende manieren valid en invalid kan gebruiken via css en met een beetje javascript. Ook ben ik erachter gekomen hoe je de date van vandaag kan toevoegen aan javscript, maar ook via de html.
+
+##### Wat ga je morgen doen?
+- Ik wil de date wat uitbreiden door ook een max aantal maanden op basis van de datum van vandaag doen.
+- En kijken naar de hover state en inval en valid states en eventuele inputs patterns.
+
+
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
 
@@ -136,8 +200,14 @@ https://www.ns.nl/
 Voor html inputs:
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input 
 
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date 
+
+Html postcode pattern:
+- https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code 
+
 Geraadpleegde site voor Javascript:
 - https://stackoverflow.com/questions/9887360/how-can-i-check-if-a-checkbox-is-checked 
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling  
 - https://www.tutorialspoint.com/how-to-uncheck-a-radio-button-using-javascript-jquery 
+- https://stackoverflow.com/questions/25159330/how-to-convert-an-iso-date-to-the-date-format-yyyy-mm-dd 
