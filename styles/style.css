@@ -4,30 +4,30 @@
 }
 
 :root {
-  color-scheme: light-dark;
+  color-scheme: light dark;
   /* https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system */
   /* COLORS */
-  --background-color-default: #ffffff, #0d0e10;
-  --background-color-elevated-sunken: #f5f5f7, #000000;
-  --background-color-brand-primary: #ffc70f, #252528; 
-  --background-color-brand-secondary: #0b3680, #9ac5f1; 
-  --background-color-input: #ffffff, #000000;
-  --background-color-info-subtle: #ebf5ff, #28282a ;
+  --background-color-default: light-dark(#ffffff, #0d0e10);
+  --background-color-elevated-sunken: light-dark( #f5f5f7, #000000);
+  --background-color-brand-primary: light-dark( #ffc70f, #252528); 
+  --background-color-brand-secondary: light-dark(#0b3680, #9ac5f1); 
+  --background-color-input: light-dark(#ffffff, #000000);
+  --background-color-info-subtle: light-dark(#ebf5ff, #28282a);
 
-  --background-color-button: #0062d1, #5d9fea;
-  --background-color-button-hover: #0b44a1, #9ac5f1 ;
-  --heading-color: #0b3680, #e4e5e8;
-  --text-color: #252528, #c4c5cb;
-  --brand-color-primary:#0b3680, #ffc70f;
-  --brand-color-secondary: #ffc70f, #0b3680;
+  --background-color-button: light-dark(#0062d1, #5d9fea);
+  --background-color-button-hover: light-dark(#0b44a1, #9ac5f1);
+  --heading-color: light-dark(#0b3680, #e4e5e8);
+  --text-color: light-dark(#252528, #c4c5cb);
+  --brand-color-primary:light-dark(#0b3680, #ffc70f);
+  --brand-color-secondary: light-dark(#ffc70f, #0b3680);
 
-  --color-border-default: #e4e5e8, #343536;
-  --color-border-input-default: #919197, #757677;
-  --color-border-input-hover: #73747a,#979798;
+  --color-border-default: light-dark(#e4e5e8, #343536);
+  --color-border-input-default: light-dark(#919197, #757677);
+  --color-border-input-hover:light-dark( #73747a,#979798);
 
-  --warning-color: #f05c01, #ff9545;
-  --success-color: #3e7f67, #4dcda5;
-  --error-color: #ce092d, #ff9396;
+  --warning-color: light-dark(#f05c01, #ff9545);
+  --success-color: light-dark(#3e7f67, #4dcda5);
+  --error-color: light-dark(#ce092d, #ff9396);
 
 
 
