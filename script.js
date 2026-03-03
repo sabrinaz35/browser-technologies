@@ -3,12 +3,12 @@ console.log('hello world');
 
 // Function voor de reset van de radio buttons van de in en uitklap functie//
 // Met hulp van Sanne geschreven
-let valueNos = document.querySelectorAll('input[value="no"]');
-let valueYes = document.querySelector('input[value="yes"]');
+let inputWithValueNos = document.querySelectorAll('input[value="no"]');
+let inputWithValueYes = document.querySelector('input[value="yes"]');
 
 
-valueNos.forEach( function(valueNo){
-    valueNo.addEventListener('change', clearInputs)
+inputWithValueNos.forEach( function(inputWithValueNos){
+    inputWithValueNos.addEventListener('change', clearInputs)
 }) 
 
 
@@ -45,7 +45,7 @@ function clearInputs(event){
 
 
 // Op basis van de vorige geschreven een required toevoegen aan de volgende button
-valueYes.addEventListener('change', addRequired);
+inputWithValueYes.addEventListener('change', addRequired);
 
 function addRequired(event){
     let previousRadioPushed = event.target;
@@ -72,23 +72,43 @@ function addRequired(event){
 function setCurrentDateToPicker(){
     let calender = document.querySelector('[type="date"]');
     
+
     const today = new Date();
-    
-    // const pastDate = new Date(today);
-    // pastDate.setMonth(pastDate.getMonth() - 8)
+    const pastDate = new Date(today);
 
-
+    pastDate.setMonth(today.getMonth() - 8);
     // De split zorgt ervoor dat er geen tijd wordt laten zien
     // https://stackoverflow.com/questions/25159330/how-to-convert-an-iso-date-to-the-date-format-yyyy-mm-dd
     const dateFormatter = today.toISOString().split("T")[0];
+    const previousDateFormatter = pastDate.toISOString().split("T")[0];
+   
+
     calender.value = dateFormatter;
+    // max datum op vandaag 
+    calender.setAttribute('max', dateFormatter);
+    //eerdere datum
+    calender.setAttribute('min', previousDateFormatter);
 
     console.log(calender.value);
+
+    /** Bron chatgpt gebuikt om de fouten eruit te halen
+     * https://chatgpt.com/share/69a6d433-8ccc-8001-b362-9685ea865490 
+     * Prompt: alle code van deze functie + waarom werkt dit niet?
+     */ 
 }
 
 setCurrentDateToPicker()
 
 
+// Validation om te kijken of de initialen in hoofdletters geschreven worden
+// Voor het opzetje van de toLowerCase()
+// https://stackoverflow.com/questions/1027224/how-can-i-test-if-a-letter-in-a-string-is-uppercase-or-lowercase-using-javascrip 
+ var initialsInput = document.querySelector('#firstnameDeseased');
+
+initialsInput.addEventListener('input', Event => {
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+    initialsInput.value = initialsInput.value.toUpperCase() + '.';
+});
 
 
 

@@ -69,7 +69,6 @@
               id="DeseaseDate" 
               name="DeseaseDate" 
               value="2026-03-02"
-              min="2025-08-02"
               />
             </div>
           </fieldset>
@@ -84,12 +83,16 @@
                 geregistreerde partner op het moment van overlijden?
               </legend>
               <label>
-                <input type="radio" name="geregistreerdePartner" value="no" />
-                Nee. Ga verder met vraag 1c.
+                <input 
+                required 
+                type="radio" 
+                name="geregistreerdePartner" 
+                value="no" />
+                Nee 
               </label>
               <label>
                 <input type="radio" name="geregistreerdePartner" value="yes" />
-                Ja.
+                Ja
               </label>
             </fieldset>
 
@@ -102,7 +105,7 @@
                 </legend>
                 <label>
                   <input type="radio" name="notarieleAkte" value="no" />
-                  Nee. Ga verder met vraag 1c.
+                  Nee
                 </label>
                 <label for="notarialDeedYes">
                   <input type="radio" name="notarieleAkte" value="yes" />
@@ -120,7 +123,9 @@
                     verrekenbeding?
                   </legend>
                   <label>
-                    <input type="radio" name="vakbeding" />
+                    <input 
+                    type="radio" 
+                    name="vakbeding" />
                     Nee
                   </label>
                   <label>
@@ -143,8 +148,12 @@
             <fieldset class="hiddenBlock">
               <legend>Had de overledene kinderen?</legend>
               <label>
-                <input type="radio" name="overledenKinderen" value="no"/>
-                Nee. Ga verder met vraag 1d.
+                <input 
+                required
+                type="radio" 
+                name="overledenKinderen" 
+                value="no"/>
+                Nee 
               </label>
               <label>
                 <input type="radio" name="overledenKinderen" value="yes"/>
@@ -160,7 +169,7 @@
                  </legend>
                   <label>
                     <input type="radio" name="overledenKindAangifte" value="no"/>
-                    Nee. Ga verder met vraag 1d.
+                    Nee
                   </label>
                   <label>
                     <input type="radio" name="overledenKindAangifte" value="yes"/>
@@ -173,7 +182,7 @@
                   <legend>Had dit overleden kind zelf kinderen?</legend>
                   <label>
                     <input type="radio" name="overledenKindZelfKinderen" value="no"/>
-                    Nee.
+                    Nee
                   </label>
                   <label>
                     <input type="radio" name="overledenKindZelfKinderen" value="yes"/>
@@ -190,19 +199,23 @@
             <fieldset class="hiddenBlock">
               <legend>Had de overledene een testament?</legend>
               <label>
-                <input type="radio" name="overledenTestament" value="no"/>
-                Nee. Ga verder met vraag 2.
+                <input 
+                required
+                type="radio" 
+                name="overledenTestament" 
+                value="no"/>
+                Nee
               </label>
               <label>
                 <input type="radio" name="overledenTestament" value="yes"/>
-                Ja. Vul de gegevens in van de notaris die het testament heeft
-                opgemaakt en de datum van het testament.
+                Ja
               </label>
             </fieldset>
 
             <div>
               <fieldset>
-                <legend>Gegevens notaris overledene</legend>
+                <legend>Vul de gegevens in van de notaris die het testament heeft
+                opgemaakt en de datum van het testament.</legend>
                 <label for="protocolNumberNotary">Protocolnummer Notaris</label>
                 <input type="text" id="protocolNumberNotary" />
                 <label for="firstnameNotary"> Voorletter(s) </label>
@@ -229,10 +242,30 @@
             <legend class="heading">
               Persoonsgegevens gemachtigde
             </legend>
-            <p>
+            <!-- <p>
               Vul 1 van de 3 in: BSN of RSIN van gemachtigde, het beconnummer
               van de adviseur of het protocolnummer van de notaris.
-            </p>
+            </p> -->
+
+
+          
+            <fieldset>
+                <legend>Vul een van de drie in:</legend>
+              <label> 
+                <input type="radio">
+                BSN of RSIN van gemachtigde
+              </label>
+              <label> 
+                <input type="radio">
+                het beconnummer van de adviseur
+              </label>
+              <label> 
+                <input type="radio">
+                het protocolnummer van de notaris
+              </label>
+            </fieldset>
+
+
             <label for="bsnAuthorizedPerson">Bsn/RSIN gemachtigde</label>
             <input
               type="text"
@@ -391,7 +424,7 @@
             </fieldset>
           </fieldset>
         </fieldset>
-        <button>submit</button>
+        <button type="submit">Verstuur</button>
       </form>
     </main>
     <footer></footer>

@@ -133,7 +133,7 @@ Gesproken over mijn leerdoel, ik merk dat ik door dat stuk code met Sanne te heb
 Het lijkt erop dat links en anchor attribute wel redelijk makkelijk om na te maken zijn, maar ik ben bang dat het stukje toegankelijkheid nog best wel lastig gaat worden. 
 
 Html: 
-- Voor de html zou je een div nodig hebben en een mogelijkheid om de link erin te zetten, maar misschien is dat ook mogelijk via javascript
+- Voor de html zou je een div nodig hebben en een mogelijkheid om de link erin te zetten, maar misschien is dat ook mogelijk via javascript. 
 
 Css: 
 - Css heb je echt nodig voor de styling bij de link een underscore en bij de a als je er een button van wilt maken de styling van een button
@@ -188,15 +188,82 @@ Ik heb geleerd hoe je op verschillende manieren valid en invalid kan gebruiken v
 - Ik wil de date wat uitbreiden door ook een max aantal maanden op basis van de datum van vandaag doen.
 - En kijken naar de hover state en inval en valid states en eventuele inputs patterns.
 
+### Dinsdag
+#### Weekly Geek 
+Je kan een element in de html een role attribute meegeven en daarin een link om aan te kunnen geven voor de screenreader zodat het duidelijk is dat het een link is. 
+
+Conclusie er komt veel meer bij kijken dan ik dacht.
+
+#### Daily checkout 2 maart 2026
+Samen met Aya A. Misschien dat ikw at kan doen met die landcodes of de binnen nederland of buiten nederland daar op kan gaan focussen
+
+##### Wat heb je vandaag gedaan?
+Vandaag ben ik ook weer bezig geweest met de styling, de dat picker verfijnen en de inval en valid basics toe te voegen. Ook heb ik een start gemaakt aan de validatie bij de initialen.
+
+<img src="/readme-images/test-metinitialen.png" alt="initialen in javascript" width="300px">
+
+
+Bij de validatie van inputs wilde ik een icon toevoegen zodra iets goed ingevuld is dat er dan een vinkje komt te staan, alleen dat probeerde ik met ::after, alleen op de een of andere manier werkte dat niet.
+<img src="/readme-images/valid-icon-metafter.png" alt="valid met after geprobeerd" width="300px">
+
+
+label:has(input:valid)::after {
+    content:"✅";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+Uiteindelijk heb ik het opgelost met een image als background toe te voegen: 
+<img src="/readme-images/valid-checked-test.png" alt="Hoe het visueel eruitziet met het vinkje" width="300px">
+
+Ook ben ik uiteindelijk verder gegaan met de capslock bij de initialen via javascript toe te voegen. Javascript leren bergijpen is ook een van mijn leerdoelen, vandaar dat ik dit ook als het kan probeer te gebruiken.
+
+<img src="/readme-images/capslock-via-java.png" alt="Hoe het visueel eruitziet met hoofdletters" width="300px">
+
+Uiteindelijk wil ik er nog een punt aan toevoegen als het mogelijk is. Ik heb nu het volgende gedaan:
+
+ var initialsInput = document.querySelector('#firstnameDeseased');
+
+initialsInput.addEventListener('input', Event => {
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+    initialsInput.value = initialsInput.value.toUpperCase();
+});
+
+Waarin de lage letters omgezet worden naar hoofdletters, alleen weet ik nog niet of dit dan ook zo werkt naar de database toe.
+
+Uiteindelijk heb ik dit geprobeerd om de . ertussen te krijgen, alleen het probleem daarbij is, is dat ik dan niet meer kan verwijderen en aanpassen en dat is niet zo gebruiks vriendelijk.
+
+initialsInput.value = initialsInput.value.toUpperCase() + '.';
+
+Uiteindelijk ben ik ook vast begonnen aan de volgende vraag waarbij een van de drie opties aangeklikt kan worden en dat dan de volgende tevoorschijn komen.
+
+<img src="/readme-images/start-gegevens-gemachtigde.png" alt="toevoegen van vul een van de drie in" width="300px">
+
+##### Hoelang heeft dat geduurt?
+- 09:30 - 10:00 kickoff + weekly geek met groepje bespreken
+- 10:00 - 10:30 gezamelijk de uitkomsten van de weekly geek bespreken.
+- 10:30 - 11:45 workshop valid en invalid via javascript
+- 11:45 - 12:30 werken aan de styling en light,dark mode toegevoegd plus de functie van de date picker afgemaakt
+- 12:30 - 13:30 pauze
+- 13:30 - 16:00 gewerkt aan de functie voor de hoofdletters, invalid en valid states toegevoegd aan css, button hover + die van file gemaakt. De input fields aangepast.
+- 16:00 - checkout
+
+##### Wat heb je vandaag geleerd? 
+Ik heb vandaag verschillende dingen geleerd, ik heb geleerd hoe ik in javascript de min en max kan aangeven op basis van de huidige datum en ik weet nu ook hoe je een uppercase moet toevoegen aan de code via js. En ook heb ik geleerd dat een :: after niet helemaal werkt met het toevoegen van een icon en daarvoor in de plaats heb ik een background-image gebruikt en dat werkte wel.
+
+##### Wat ga je morgen doen?
+- Ik wil de uppercase met punt gaan verbetern, zodat het daarna nog wel aanpasbaar is
+- Verder met de tweede vraag met die opties
+- Responsive maken van de pagina
+- Kijken of de animatie lukt
+- en de andere datepicker aan gaan pakken over wanneer getrouwd en daarover brainstormen wat het handigst is om daarmee te doen.
 
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
 
-Design system NS en fonts: 
-https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system 
-
-https://www.ns.nl/
-
+### Html bronnen
 Voor html inputs:
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input 
 
@@ -205,9 +272,25 @@ Voor html inputs:
 Html postcode pattern:
 - https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code 
 
-Geraadpleegde site voor Javascript:
+### Css bronnen
+
+Design system NS en fonts: 
+- https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system 
+
+- https://www.ns.nl/
+- https://www.geeksforgeeks.org/html/how-to-style-the-input-file-type-in-forms-using-css/ 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position 
+- https://www.figma.com/community/plugin/1498729606631593833/iconify-icons-library --> Via figma gebruikt voor het icoontje
+- https://css-tricks.com/form-validation-ux-html-css/ 
+
+### Geraadpleegde site voor Javascript:
 - https://stackoverflow.com/questions/9887360/how-can-i-check-if-a-checkbox-is-checked 
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling  
 - https://www.tutorialspoint.com/how-to-uncheck-a-radio-button-using-javascript-jquery 
-- https://stackoverflow.com/questions/25159330/how-to-convert-an-iso-date-to-the-date-format-yyyy-mm-dd 
+- https://stackoverflow.com/questions/25159330/how-to-convert-an-iso-date-to-the-date-format-yyyy-mm-dd
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase 
+
+Chatgpt:
+Function date picker: 
+https://chatgpt.com/share/69a6d433-8ccc-8001-b362-9685ea865490  

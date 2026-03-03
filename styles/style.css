@@ -15,7 +15,6 @@
   --background-color-info-subtle: light-dark(#ebf5ff, #28282a);
 
   --background-color-button: light-dark(#0062d1, #5d9fea);
-  --background-color-button-hover: light-dark(#0b44a1, #9ac5f1);
   --heading-color: light-dark(#0b3680, #e4e5e8);
   --text-color: light-dark(#252528, #c4c5cb);
   --brand-color-primary:light-dark(#0b3680, #ffc70f);
@@ -23,16 +22,14 @@
 
   --color-border-default: light-dark(#e4e5e8, #343536);
   --color-border-input-default: light-dark(#919197, #757677);
-  --color-border-input-hover:light-dark( #73747a,#979798);
 
   --warning-color: light-dark(#f05c01, #ff9545);
   --success-color: light-dark(#3e7f67, #4dcda5);
   --error-color: light-dark(#ce092d, #ff9396);
 
-
-
   /* HOVER COLORS */
-
+  --background-color-button-hover: light-dark(#0b44a1, #9ac5f1);
+  --color-border-input-hover:light-dark( #73747a,#979798);
 
   /* HEADINGS */
   --heading-1-web: 28px;
@@ -47,7 +44,10 @@
   --body-text-small: 0.875rem;
   --body-text-x-small: 0.75rem;
 
-  --padding-insert: 16px;
+  --padding-insert-xs: 8px;
+  --padding-insert-s: 12px;
+  --padding-insert-m: 16px;
+
 
   /* BORDER-RADIUS */
   --border-radius-small: 3px;
@@ -65,8 +65,6 @@
 /**************************************/
 /*               MARK: fonts          */
 /**************************************/
-
-
 @font-face {
   /* https://www.ns.nl/ */
   font-family: nssans;
@@ -86,12 +84,50 @@
 /**************************************/
 .hiddenBlock + div {
   display: none;
-
+  /* animation-name: showBlock;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-direction: reverse; */
 }
 
 .hiddenBlock:has([value="yes"]:checked) + div {
   display: block;
+  /* animation-name: showBlock;
+  animation-duration: 1s;
+  animation-timing-function: ease-in; */
 }
+/* 
+@keyframes showBlock {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+} */
+
+
+/**************************************/
+/*   MARK: Invalid en valid styling   */
+/**************************************/
+
+input:user-invalid {
+  border-color: var(--error-color);
+}
+
+input:user-valid {
+  border-color: var(--success-color);
+}
+
+input[type="text"]:user-valid {
+  /* https://www.figma.com/community/plugin/1498729606631593833/iconify-icons-library */
+  /* https://css-tricks.com/form-validation-ux-html-css/ */
+  background: url(/images/iets-icons_check-fill.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position */
+  background-position: right 10px center;
+}
+
 
 
 /**************************************/
@@ -130,11 +166,24 @@ fieldset {
   & fieldset legend {
     font-size: var(--body-text-medium);
   }
+
+  input {
+    background-color: var(--background-color-input);
+    border: solid 1px var(--color-border-default);
+    border-radius: var(--border-radius-default);
+    padding: var(--padding-insert-xs);
+
+    &:hover {
+      border-color: var(--color-border-input-hover);
+    }
+
+    &[type="file"] {
+      margin-top: var(--spacing-gap-m);
+    }
+  }
 }
 
 legend {
-  /* haalt de legend uit de border */
-  /* float: left; */
   font-family: nssans-bold, sans-serif;
   color: var(--heading-color);
   font-size: var(--body-text-small);
@@ -154,26 +203,12 @@ h1 {
 label{
   color: var(--heading-color);
   display: block;
-  padding-top: var(--padding-insert);
+  padding-top: var(--padding-insert-m);
 }
 
-button {
-  border: none;
-  background-color: var(--background-color-button);
-  border-radius: var(--border-radius-default);
-  color: var(--background-color-default);
-  font-family: nssans-bold, sans-serif;
-  padding: var(--padding-insert);
-  
-  width: 10rem;
-  align-self: center;
-
-}
 
 /* De warning tekst */
 header {
-
-
   p:first-of-type {
   font-size: var(--body-text-large);
   color: var(--warning-color);
@@ -182,19 +217,32 @@ header {
 
 
 /**************************************/
-/*   MARK: Specifieke input styling   */
+/*   MARK: Button styling             */
 /**************************************/
 
-[type="file"] button {
+/* https://www.geeksforgeeks.org/html/how-to-style-the-input-file-type-in-forms-using-css/ */
+button, input[type="file"]::file-selector-button  {
+  border: none;
   background-color: var(--background-color-button);
+  border-radius: var(--border-radius-default);
+  color: var(--background-color-default);
+  font-family: nssans-bold, sans-serif;
+  padding: var(--padding-insert-m);
+
+  width: 10rem;
+  align-self: center;
+
+  &:hover {
+    background-color: var(--background-color-button-hover);
+  }
 }
 
 
 
 
-/**************************************/
-/*   MARK: Invalid en valid styling   */
-/**************************************/
+
+
+
 
 
 
