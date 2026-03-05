@@ -260,6 +260,21 @@ Ik heb vandaag verschillende dingen geleerd, ik heb geleerd hoe ik in javascript
 - Kijken of de animatie lukt
 - en de andere datepicker aan gaan pakken over wanneer getrouwd en daarover brainstormen wat het handigst is om daarmee te doen.
 
+
+### Wekelijkse reflectie 5 maart
+In verband met onvoorziene omstandigheden kon ik niet aanwezig zijn tijdens de voortgangsgesprekken. Ik heb met Vasilis maandag afgesproken voor een voortgangsgesprek en ik ga feedbavk vragen aan mijn medestudenten over mijn browser tech tot nu toe.
+
+Feedback Nienke:
+- Focus state in de ns kleuren
+- Is het vinkje wel accesible voor de screenreader? Dan op een andere manier aangeven wat de status is.
+- Animatie voor de progressive disclosure
+
+Feedback Jeppe:
+- Ns stijl ziet er nice uit - misschien iets meer geel, het werkt ook alleen voorletters nog niet helemaal as you know
+- Goed bezig 
+
+
+
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
 
@@ -273,7 +288,6 @@ Html postcode pattern:
 - https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code 
 
 ### Css bronnen
-
 Design system NS en fonts: 
 - https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system 
 
