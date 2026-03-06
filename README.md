@@ -1,4 +1,10 @@
 # browser-technologies
+Mijn leerdoelen voor deze minor zijn: 
+- Leren begrijpen hoe je een redelijke complexe function schrijft en goed begrijpen wat ik nu doe. Zodat ik zelfstandiger met javascript om kan gaan en ook makkelijker zelf dingen kan toevoegen.
+- Visueel aantrekkelijke css code schrijven, dingen uitproberen met svg's en meer de diepte opzoeken met animaties en de mogelijkheden daarvan. Zodat ik meer de ins en out en de mogelijkheden te leren kennen. Maar voornamelijk kijken naar wat er allemaal nog meer mogelijk is.
+- Tijdens het samenwerken mijn belangen beter benoemen en de andere daarin ook de ruimte in te geven. Zodat de communicatie in groepsverband beter en soepel kan laten lopen.
+
+Bij dit vak in deze minor zal ik mij meer focussen op het visueel aantrekkelijk maken algemeen en het schrijven van javascript functies dat ik zelf ook begrijp.
 
 ## Week 1
 ### Weekly Geek aantekeningen
@@ -272,6 +278,12 @@ Feedback Nienke:
 Feedback Jeppe:
 - Ns stijl ziet er nice uit - misschien iets meer geel, het werkt ook alleen voorletters nog niet helemaal as you know
 - Goed bezig 
+
+Als ik zelfstandig op terug kijk op afgelopen week met mijn leerdoelen in mijn achterhoofd ben ik wel blij met wat ik allemaal heb gedaan, ik heb zelfstandig functies geschreven voor de datepicker. Ook nu de styling op mijn werk zit ziet het er al meteen een stuk beter uit en overzichtelijker, vorige week had ik namelijk nog de lijnen van de fieldsets staan en zorgde bij mij ook wel voor verwarring.
+
+Vragen voor tijdens mijn voortgang op maandag:
+- Als ik via javascript de letters in hoofdletters zet, wordt dat dan ook op die manier door gegeven aan de database? of is dit dan alleen visueel?
+- Het tonen van de een van de drie bij persoonsgegevens gemachtigde, als ik deze ook laat verdwijnen en laat zien, valt dit dan onder dezelfde pattern als die ik daarvoor heb gemaakt? 
 
 
 
