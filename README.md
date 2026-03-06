@@ -316,6 +316,8 @@ Design system NS en fonts:
 - https://www.tutorialspoint.com/how-to-uncheck-a-radio-button-using-javascript-jquery 
 - https://stackoverflow.com/questions/25159330/how-to-convert-an-iso-date-to-the-date-format-yyyy-mm-dd
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase 
+- https://codegym.cc/groups/posts/stringsplit-method-in-java --> split
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join --> join
 
 Chatgpt:
 Function date picker: 

@@ -105,9 +105,23 @@ setCurrentDateToPicker()
 // https://stackoverflow.com/questions/1027224/how-can-i-test-if-a-letter-in-a-string-is-uppercase-or-lowercase-using-javascrip 
  var initialsInput = document.querySelector('#firstnameDeseased');
 
-initialsInput.addEventListener('input', Event => {
+initialsInput.addEventListener('blur', () => {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-    initialsInput.value = initialsInput.value.toUpperCase() + '.';
+    // initialsInput.value = initialsInput.value.toUpperCase() + '.';
+
+    let value = initialsInput.value.toUpperCase();
+    // Eerst split hij de characters op door split(') en daarna voegt hij zwe weer samen door een join door middel van een punt
+    // https://codegym.cc/groups/posts/stringsplit-method-in-java --> split
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join --> join
+    initialsInput.value = value.split('').join('.') + '+';
+
+
+    // Een pging om de punt weg te krijgen na het typen de extra + hierboven zorgt ervoor dat die er nog in blijft staan
+    if(initialsInput.value == '.') {
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear
+        initialsInput.value.clear();
+    }
+
 });
 
 
