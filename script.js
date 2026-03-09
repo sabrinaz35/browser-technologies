@@ -107,13 +107,13 @@ setCurrentDateToPicker()
 
 initialsInput.addEventListener('input', () => {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-    initialsInput.value = initialsInput.value.toUpperCase() + '.';
+    // initialsInput.value = initialsInput.value.toUpperCase() + '.';
 
     // let value = initialsInput.value.toUpperCase();
     // Eerst split hij de characters op door split(') en daarna voegt hij zwe weer samen door een join door middel van een punt
     // https://codegym.cc/groups/posts/stringsplit-method-in-java --> split
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join --> join
-    // initialsInput.value = value.split('').join('.') + '.';
+    // initialsInput.value = value.split('').join('.');
 
 
     // // Een pging om de punt weg te krijgen na het typen de extra + hierboven zorgt ervoor dat die er nog in blijft staan

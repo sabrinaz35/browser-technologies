@@ -31,9 +31,9 @@
                 value=""
                 id="firstnameDeseased"
               />
+              <p class="errorMemo">Sorry, je naam moet meer dan 2 tekens hebben</p>
               <label for="tussenvoegsel"> Tussenvoegsel(s) </label>
               <input
-                required
                 type="text"
                 name="SurnameDeseased"
                 value=""
@@ -47,6 +47,7 @@
                 value=""
                 id="SurnameDeseased"
               />
+              <p class="errorMemo">Sorry, je naam moet meer dan 2 tekens hebben </p>
             </div>
 
             <div>
@@ -62,6 +63,7 @@
                 name="bsnDeseased"
                 id="bsnDeseased"
               />
+              <p class="errorMemo">Sorry dit is niet goed, bsn bestaat uit 9 cijfers</p>
               <label for="DeseaseDate"> Overlijdensdatum </label>
               <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date -->
               <input 
@@ -91,7 +93,10 @@
                 Nee 
               </label>
               <label>
-                <input type="radio" name="geregistreerdePartner" value="yes" />
+                <input 
+                type="radio" 
+                name="geregistreerdePartner" 
+                value="yes" />
                 Ja
               </label>
             </fieldset>

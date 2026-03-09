@@ -79,6 +79,7 @@
 }
 
 
+
 /**************************************/
 /* Generieke code die herbruikbaar is */
 /**************************************/
@@ -105,6 +106,19 @@
   }
 } */
 
+/* Error memo appearence herbruikbaar */
+.errorMemo {
+  opacity: 0;
+  height: 0;
+}
+
+input:user-invalid + .errorMemo {
+  opacity: 1;
+  height: 1.25rem;
+  color: var(--error-color);
+  font-size: var(--body-text-small);
+  padding-top: 2px;
+}
 
 /**************************************/
 /*   MARK: Invalid en valid styling   */
@@ -128,7 +142,25 @@ input[type="text"]:user-valid {
   background-position: right 10px center;
 }
 
+input[type="text"]:user-invalid {
+  /* https://www.figma.com/community/plugin/1498729606631593833/iconify-icons-library */
+  background: url(/images/mdi_cross-circle.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
 
+
+fieldset:has( > label > input[type="radio"]:not(:indeterminate)) > legend::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/iets-icons_check-fill.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+}
 
 /**************************************/
 /*          MARK: Algemene styling    */
@@ -154,6 +186,7 @@ form {
 
       & > legend {
         font-size: var(--heading-2-web);
+        
       }
   }
 }
@@ -165,6 +198,7 @@ fieldset {
 
   & fieldset legend {
     font-size: var(--body-text-medium);
+    align-self: center;
   }
 
   input {
@@ -188,6 +222,8 @@ legend {
   color: var(--heading-color);
   font-size: var(--body-text-small);
 
+  /* voor de styling van de vinkjes */
+  display: inline-flex;
 }
 
 h1 {

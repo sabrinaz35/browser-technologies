@@ -279,12 +279,30 @@ Feedback Jeppe:
 - Ns stijl ziet er nice uit - misschien iets meer geel, het werkt ook alleen voorletters nog niet helemaal as you know
 - Goed bezig 
 
+Feedback Julius:
+- Een sterretje toevoegen bij de required inputs
+- Is er een reden waarom de layout links gealligned is? 
+
 Als ik zelfstandig op terug kijk op afgelopen week met mijn leerdoelen in mijn achterhoofd ben ik wel blij met wat ik allemaal heb gedaan, ik heb zelfstandig functies geschreven voor de datepicker. Ook nu de styling op mijn werk zit ziet het er al meteen een stuk beter uit en overzichtelijker, vorige week had ik namelijk nog de lijnen van de fieldsets staan en zorgde bij mij ook wel voor verwarring.
 
 Vragen voor tijdens mijn voortgang op maandag:
 - Als ik via javascript de letters in hoofdletters zet, wordt dat dan ook op die manier door gegeven aan de database? of is dit dan alleen visueel?
 - Het tonen van de een van de drie bij persoonsgegevens gemachtigde, als ik deze ook laat verdwijnen en laat zien, valt dit dan onder dezelfde pattern als die ik daarvoor heb gemaakt? 
 
+
+## Week 3
+### Maandag 9 maart
+#### Proces vandaag
+
+Ik ben vandaag bezig geweest met invalid en valid verder te doen, en heb mij daarbij een focus gelegd op de radio buttons. Hieronder had ik een selector gebruikt alleen dit werkte gewoon totaal niet.
+<img src="/readme-images/selector-radiobutton.png" alt="foto van code van de foute selector" width="300px">
+
+Daarna had ik dit geprobeerd alleen dit werkte ook niet. Het is toch lastig als je al zo een lange selector heb staan om dan vervolgens daar een juiste van te maken.
+
+<img src="/readme-images/selector-radiobutton2.png" alt="foto van code van de foute selector" width="300px">
+
+Uiteindelijk heb ik dit geprobeerd en dat werkte wel.
+<img src="/readme-images/final-radiobutton-selector.png.png" alt="uiteindelijke werkende selector" width="300px">
 
 
 ## Bronvermelding
