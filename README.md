@@ -347,8 +347,10 @@ Morgen wil ik verder aan de tweede pattern welke van de drie en alvast ook een s
 
 ### Maandag 10 maart
 #### Proces vandaag
-
+Maar zodra je doet wat ik hieronder doe, dan valt het over het volgende block met vragen heen en die kan je dan niet invullen, dus dit zou wel werken als je de vragen los van elkaar toont.
 <img src="/readme-images/transition-progressive-disclosure.png" alt="javascript code met daarin de functie van de backspace" width="300px">
+
+Is dat het dan waard om het zo aan te passen naar een multi scherm form? 
 
 ##### Wat heb je vandaag gedaan?
 ##### Hoelang heeft dat geduurt?

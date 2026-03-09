@@ -86,18 +86,18 @@
 
 /* De animatie moet nog gefinetuned worden */
 .hiddenBlock + div {
-  /* display: none; */
-  height: 0;
-  opacity: 0;
+  display: none;
+  /* height: 0;
+  opacity: 0; */
 }
 
 .hiddenBlock:has([value="yes"]:checked) + div {
-  /* display: block; */
-   height: fit-content;
+  display: block;
+   /* height: fit-content;
    opacity: 1;
    animation-name: showBlocks;
    animation-duration: .15s;
-   animation-timing-function: ease;
+   animation-timing-function: ease; */
    /* animation-direction: ; */
 }
 
