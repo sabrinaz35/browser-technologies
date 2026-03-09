@@ -324,6 +324,8 @@ Er zijn verschillende manieren 3x om een input te stylen, maar vaak is het niet 
 
 Hele aparte video.
 
+#### Daily checkout 9 maart
+Dit heb ik vandaag samen gedaan met Lisa, haar focus lag vandaag op de selectoren en is bezig geweest met haar progressive disclosure.
 
 ##### Wat heb je vandaag gedaan?
 Vandaag ben ik bezig geweest met de invalid en valid states bij bepaalde punten. En ik ben gaan kijken naar de tweede pattern, ook heb ik mijn hoofdletter voor de initialen gefixt. Voor de tweede pattern dacht ik easy oke makkelijk de welke van de drie, maar dat blijkt toch iets lastiger te zijn. 
@@ -341,6 +343,17 @@ Ik heb geleerd hoe ik in javascript een backspace button aanspreek en daarmee ee
 
 ##### Wat ga je morgen doen?
 Morgen wil ik verder aan de tweede pattern welke van de drie en alvast ook een start maken als het lukt aan de derder pattern over de toelichtingen.
+
+
+### Maandag 10 maart
+#### Proces vandaag
+
+<img src="/readme-images/transition-progressive-disclosure.png" alt="javascript code met daarin de functie van de backspace" width="300px">
+
+##### Wat heb je vandaag gedaan?
+##### Hoelang heeft dat geduurt?
+##### Wat heb je geleerd?
+##### Wat ga je morgen doen?
 
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.

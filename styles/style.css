@@ -83,14 +83,32 @@
 /**************************************/
 /* MARK: Generieke code die herbruikbaar is */
 /**************************************/
-.hiddenBlock + div {
-  display: none;
 
+/* De animatie moet nog gefinetuned worden */
+.hiddenBlock + div {
+  /* display: none; */
+  height: 0;
+  opacity: 0;
 }
 
 .hiddenBlock:has([value="yes"]:checked) + div {
-  display: block;
+  /* display: block; */
+   height: fit-content;
+   opacity: 1;
+   animation-name: showBlocks;
+   animation-duration: .15s;
+   animation-timing-function: ease;
+   /* animation-direction: ; */
+}
 
+@keyframes showBlocks {
+  0% {
+    height: 0;
+  } 50%{
+    height: calc(fit-content - 60%);
+  }100% {
+    height: fit-content;
+  }
 }
 
 /* Error memo appearence herbruikbaar */
@@ -166,7 +184,6 @@ form {
   display: grid;
   place-self: center;
   align-content: flex-start;
-
 
     & > fieldset {
     border-radius: var(--border-radius-default);
