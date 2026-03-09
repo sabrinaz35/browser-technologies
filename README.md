@@ -289,11 +289,18 @@ Vragen voor tijdens mijn voortgang op maandag:
 - Als ik via javascript de letters in hoofdletters zet, wordt dat dan ook op die manier door gegeven aan de database? of is dit dan alleen visueel?
 - Het tonen van de een van de drie bij persoonsgegevens gemachtigde, als ik deze ook laat verdwijnen en laat zien, valt dit dan onder dezelfde pattern als die ik daarvoor heb gemaakt? 
 
+Uiteindelijk hebben we besproken tijdens de voortgang:
+- Dat je lang genoeg kan uitvogelen en door kan gaan om iets te perfectioneren, zo kwam bij mij uit dat de hoofdletters alsnog niet goed genoeg zijn. want als je de punt verwijdert en dan weer typt, past hij dit niet aan.
+- Patterns staan op dlo.
+- Om de display te animeren kan ik misschien de height aanpassen en daarmee animeren
+- Hoe en wanneer gebruik je de valid en invalid.
+
+Ik ga denk ik voor de tweede pattern de toelichting doen, maar ik wil toch eerst kijken of die andere pattern makkelijk te fixen is met welke van de drie.
+
 
 ## Week 3
 ### Maandag 9 maart
 #### Proces vandaag
-
 Ik ben vandaag bezig geweest met invalid en valid verder te doen, en heb mij daarbij een focus gelegd op de radio buttons. Hieronder had ik een selector gebruikt alleen dit werkte gewoon totaal niet.
 <img src="/readme-images/selector-radiobutton.png" alt="foto van code van de foute selector" width="300px">
 
@@ -304,6 +311,36 @@ Daarna had ik dit geprobeerd alleen dit werkte ook niet. Het is toch lastig als 
 Uiteindelijk heb ik dit geprobeerd en dat werkte wel.
 <img src="/readme-images/final-radiobutton-selector.png.png" alt="uiteindelijke werkende selector" width="300px">
 
+Dit is het uiteindelijke resultaat ervan: 
+<img src="/readme-images/result-radiobutten.png" alt="uiteindelijke werkende selector" width="300px">
+
+Daarna ben ik toch weer verder gegaan aan een probleem waar ik de hele tijd al tegenaan liep en dat is dat de initialen niet wilde verwijderen nadat het een hoofdletter is geworden. Ik heb Romy Groen gevraagd of zij mij wilde helpen daarbij, want ik wist dat zij dat wel gefixt had en zo ben ik daar toch uit gekomen en heb ik het volgende gedaan: 
+<img src="/readme-images/3-backwardContent.png" alt="javascript code met daarin de functie van de backspace" width="300px">
+
+#### Weekly geek aantekeningen
+onput hebben veel issues, als je daar iets boven zet dan staat het te ver weg om bij elkaar te laten horen.
+
+Er zijn verschillende manieren 3x om een input te stylen, maar vaak is het niet goed genoeg voor de gebruiker om te snappen waar het dan nog over gaat en of er dan nog mee gedaan moet worden. Ik begrijp wat hij bedoelt met dat het lijkt op een value als je er een lijn onder zet, maar eerlijk ik zou het wel ingevuld hebben.
+
+Hele aparte video.
+
+
+##### Wat heb je vandaag gedaan?
+Vandaag ben ik bezig geweest met de invalid en valid states bij bepaalde punten. En ik ben gaan kijken naar de tweede pattern, ook heb ik mijn hoofdletter voor de initialen gefixt. Voor de tweede pattern dacht ik easy oke makkelijk de welke van de drie, maar dat blijkt toch iets lastiger te zijn. 
+
+##### Hoelang heeft dat geduurt?
+- 09:30 - 10:00 kickoff en rijk van zanten gastcollege
+- 10:00 - 12:30 werken aan de invalid en valid states 
+- 12:30 - 13:30 Pauze
+- 13:30 - 14:00 voortgansgesprek met vasilis
+- 14:00 - 15:00 werken aan de tweede pattern
+- 15:00 - 16:00 weekly geek voorbereiden
+
+##### Wat heb je geleerd?
+Ik heb geleerd hoe ik in javascript een backspace button aanspreek en daarmee een functie kan maken en ik heb geleerd hoe ik een bepaald element goed moet aanspreken, zie hiervoor mijn proces van vandaag.
+
+##### Wat ga je morgen doen?
+Morgen wil ik verder aan de tweede pattern welke van de drie en alvast ook een start maken als het lukt aan de derder pattern over de toelichtingen.
 
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
@@ -334,8 +371,8 @@ Design system NS en fonts:
 - https://www.tutorialspoint.com/how-to-uncheck-a-radio-button-using-javascript-jquery 
 - https://stackoverflow.com/questions/25159330/how-to-convert-an-iso-date-to-the-date-format-yyyy-mm-dd
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase 
-- https://codegym.cc/groups/posts/stringsplit-method-in-java --> split
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join --> join
+- https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/inputType
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 
 Chatgpt:
 Function date picker: 

@@ -81,30 +81,17 @@
 
 
 /**************************************/
-/* Generieke code die herbruikbaar is */
+/* MARK: Generieke code die herbruikbaar is */
 /**************************************/
 .hiddenBlock + div {
   display: none;
-  /* animation-name: showBlock;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  animation-direction: reverse; */
+
 }
 
 .hiddenBlock:has([value="yes"]:checked) + div {
   display: block;
-  /* animation-name: showBlock;
-  animation-duration: 1s;
-  animation-timing-function: ease-in; */
+
 }
-/* 
-@keyframes showBlock {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-} */
 
 /* Error memo appearence herbruikbaar */
 .errorMemo {
@@ -176,8 +163,10 @@ header {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-self: center;
+  align-content: flex-start;
+
 
     & > fieldset {
     border-radius: var(--border-radius-default);
@@ -195,6 +184,8 @@ fieldset {
   background-color: var(--background-color-default);
   border:none;
   margin: var(--spacing-gap-m) 0;
+  max-width: 40rem;
+
 
   & fieldset legend {
     font-size: var(--body-text-medium);
@@ -206,6 +197,10 @@ fieldset {
     border: solid 1px var(--color-border-default);
     border-radius: var(--border-radius-default);
     padding: var(--padding-insert-xs);
+    
+    &[type="text"]{
+      width: 15rem;
+    }
 
     &:hover {
       border-color: var(--color-border-input-hover);
@@ -251,6 +246,18 @@ header {
 }
 }
 
+/**************************************/
+/*   MARK: wie van de 3           */
+/**************************************/
+/* .oneOfThree {
+  display: none;
+}
+ 
+input[name="bsnGemachtigde"]:checked + .oneOfThree:nth-of-type(1){
+  display: block;
+} */
+
+
 
 /**************************************/
 /*   MARK: Button styling             */
@@ -272,10 +279,6 @@ button, input[type="file"]::file-selector-button  {
     background-color: var(--background-color-button-hover);
   }
 }
-
-
-
-
 
 
 

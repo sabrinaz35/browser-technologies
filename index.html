@@ -30,6 +30,7 @@
                 name="firstnameDeseased"
                 value=""
                 id="firstnameDeseased"
+                class="initialenInput"
               />
               <p class="errorMemo">Sorry, je naam moet meer dan 2 tekens hebben</p>
               <label for="tussenvoegsel"> Tussenvoegsel(s) </label>
@@ -112,8 +113,8 @@
                   <input type="radio" name="notarieleAkte" value="no" />
                   Nee
                 </label>
-                <label for="notarialDeedYes">
-                  <input type="radio" name="notarieleAkte" value="yes" />
+                <label>
+                  <input type="radio" name="notarieleAkte" value="yes"/>
                   Ja
                 </label>
                 <label for="inputAkte">Voeg hier uw  notariële akte toe</label>
@@ -209,8 +210,7 @@
                 type="radio" 
                 name="overledenTestament" 
                 value="no"/>
-                Nee
-              </label>
+                Nee </label>
               <label>
                 <input type="radio" name="overledenTestament" value="yes"/>
                 Ja
@@ -222,19 +222,19 @@
                 <legend>Vul de gegevens in van de notaris die het testament heeft
                 opgemaakt en de datum van het testament.</legend>
                 <label for="protocolNumberNotary">Protocolnummer Notaris</label>
-                <input type="text" id="protocolNumberNotary" />
+                <input type="text" id="protocolNumberNotary"/>
                 <label for="firstnameNotary"> Voorletter(s) </label>
-                <input required type="text" name="naam" id="firstnameNotary" />
+                <input required type="text" name="firstnameNotary" id="firstnameNotary" />
                 <label for="prefixNotary"> Tussenvoegsel(s) </label>
-                <input type="text" name="naam" value="" id="prefixNotary" />
+                <input type="text" name="prefixNotary" value="" id="prefixNotary" />
                 <label for="lastnameNotary"> Achternaam </label>
-                <input required type="text" name="naam" id="lastnameNotary" />
+                <input required type="text" name="lastnameNotary" id="lastnameNotary" />
                 <label for="locationNotary">Vestigingsplaats</label>
-                <input type="text" name="" id="locationNotary" />
+                <input type="text" name="locationNotary" id="locationNotary" />
                 <label for="willLastAmendment"
                   >Datum van het testament of van de laatste wijziging
                 </label>
-                <input type="date" name="" id="willLastAmendment" value="2026-03-02"/>
+                <input type="date" name="willLastAmendment" id="willLastAmendment" value="2026-03-02"/>
               </fieldset>
             </div>
           </fieldset>
@@ -257,43 +257,40 @@
             <fieldset>
                 <legend>Vul een van de drie in:</legend>
               <label> 
-                <input type="radio">
+                <input type="radio" value="bsnAuthorizedPerson" name="authorizedPersonInfo">
                 BSN of RSIN van gemachtigde
               </label>
               <label> 
-                <input type="radio">
-                het beconnummer van de adviseur
+                <input type="radio" value="beconNumberAdvisor" name="authorizedPersonInfo">
+                Het beconnummer van de adviseur
               </label>
               <label> 
-                <input type="radio">
-                het protocolnummer van de notaris
+                <input type="radio" value="protocolnumberNotaryAuthorizedPerson">
+                Het protocolnummer van de notaris
               </label>
             </fieldset>
 
-
-            <label for="bsnAuthorizedPerson">Bsn/RSIN gemachtigde</label>
+            <div>
+            <label class="oneOfThree">Bsn/RSIN gemachtigde
             <input
               type="text"
-              maxlength="8"
+              minlength="8"
               maxlength="9"
               name="bsnGemachtigde"
               inputmode="numeric"
-              id="bsnAuthorizedPerson"
-            />
-            <label for="beconNumberAdvisor">Beconnummer adviseur</label>
+            /> </label>
+            <label class="oneOfThree">Beconnummer adviseur
             <input
               type="text"
               name="beconNummerAdviseur"
-              id="beconNumberAdvisor"
-            />
-            <label for="protocolnumberNotaryAuthorizedPerson"
-              >Protocolnummer notaris</label
-            >
+            /></label>
+            <label class="oneOfThree" 
+              >Protocolnummer notaris
             <input
               type="number"
               name="protocolnummerNotarisGemachtigde"
-              id="protocolnumberNotaryAuthorizedPerson"
-            />
+            /></label>
+            </div>
 
             <div>
                 <label for="firstNameAutorizedPerson">
@@ -304,6 +301,7 @@
                 type="text"
                 name="voornaamGemachtigde"
                 id="firstNameAutorizedPerson"
+                class="initialenInput"
               />
               <label for="prefixAuthorizedPerson">
                 Tussenvoegsel(s) gemachtigde

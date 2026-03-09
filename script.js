@@ -103,25 +103,24 @@ setCurrentDateToPicker()
 // Validation om te kijken of de initialen in hoofdletters geschreven worden
 // Voor het opzetje van de toLowerCase()
 // https://stackoverflow.com/questions/1027224/how-can-i-test-if-a-letter-in-a-string-is-uppercase-or-lowercase-using-javascrip 
- var initialsInput = document.querySelector('#firstnameDeseased');
+ const initialsInput = document.querySelector('#firstnameDeseased');
+ const initialsInputs = document.querySelector('.initialenInput');
 
-initialsInput.addEventListener('input', () => {
+
+initialsInput.addEventListener('input', (event) => {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-    // initialsInput.value = initialsInput.value.toUpperCase() + '.';
 
-    // let value = initialsInput.value.toUpperCase();
-    // Eerst split hij de characters op door split(') en daarna voegt hij zwe weer samen door een join door middel van een punt
-    // https://codegym.cc/groups/posts/stringsplit-method-in-java --> split
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join --> join
-    // initialsInput.value = value.split('').join('.');
-
-
-    // // Een pging om de punt weg te krijgen na het typen de extra + hierboven zorgt ervoor dat die er nog in blijft staan
-    // if(initialsInput.value == '.') {
-    //     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear
-    //     initialsInput.value.clear();
-    // }
-
+     initialsInput.value = initialsInput.value.toUpperCase() + '.';
+    
+    // Ik wist dat romy die hoofdletters ook had gedaan dus ik heb aan haar gevraagd hoe zij dat deed
+    // https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/inputType
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+    //Dus als er op backspace geklikt wordt dan moet de code weg
+    if (event.inputType === 'deleteContentBackward') {
+        initialsInput.value = initialsInput.value.slice(0, -1);
+        return;
+    } 
+    
 });
 
 
