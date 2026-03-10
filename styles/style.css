@@ -83,18 +83,25 @@
 /**************************************/
 /* De animatie moet nog gefinetuned worden */
 .hiddenBlock + div {
-  display: none;
-  /* height: 0;
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  height: 0;
   opacity: 0;
-  margin: 0;
-  transition: opacity 0.5s ease; */
+  transition: opacity 0.5s ease;
+
+  /* Ik zet het blok hier helemaal weg, zodat hij niet 
+  bij de volgende fieldset van de gemachtigde in de weg 
+  zit */
+  margin-left: -100rem;
 }
 
 .hiddenBlock:has([value="yes"]:checked) + div {
-  display: block;
-  /* height: auto;
+  /* display: block; */
+  height: auto;
   opacity: 1;  
-  transition: opacity 0.5s ease; */
+  transition: opacity 0.5s ease;
+  margin: 0;
 }
 
 

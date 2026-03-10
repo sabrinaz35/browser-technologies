@@ -382,7 +382,18 @@ Is het interessant om dit generiek te maken?
 - hoe je via javascript een validation doet 
 
 ##### Wat ga je morgen doen?
-Morgen ga ik verder werken aan de transitions en kijken waar voor mij nog de uitdagingen liggen.
+Morgen ga ik verder werken aan de transitions en kijken waar voor mij nog de uitdagingen liggen. Of ik dan toch wel ga kiezen voor een generieke code voor mijn invalid states.
+
+#### Proces na school
+
+Ik kon het toch niet loslaten dat mijn transition niet werkte en dat heb ik opgelost door het deel helemaal weg te zetten met een margin, waardoor de opacity van dat block geen effect heeft op de volgende vragen binnen het formulier.
+<img src="/readme-images/animation-bij-progressive-disclosure-fix.png" alt="transition toegevoegd aan de progressive disclosure" width="300px">
+
+De reden dat ik wel ben gegaan voor de transitions is om de UX van het formulier beter te maken, de gebruiker die ziet voorzichtig de volgende vraag verschijnen en heeft niet een verward idee van waarom er plots uit het niets iets gebeurd maar wat.
+
+### Maandag 16 maart
+#### Proces vandaag
+
 
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
