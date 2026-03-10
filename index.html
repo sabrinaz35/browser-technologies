@@ -26,13 +26,17 @@
               <label for="firstnameDeseased"> Voorletter(s) </label>
               <input
                 required
+                aria-describedby="errorMessageName"
                 type="text"
                 name="firstnameDeseased"
                 value=""
                 id="firstnameDeseased"
                 class="initialenInput"
               />
-              <p class="errorMemo">Sorry, je naam moet meer dan 2 tekens hebben</p>
+
+              <p id="errorMessageName" class="errorMemo">Sorry, dit veld moet meer dan 2 tekens hebben</p>
+              <p class="succes-hidden" id="succes-id" aria-live="polite"></p>
+
               <label for="tussenvoegsel"> Tussenvoegsel(s) </label>
               <input
                 type="text"
@@ -252,8 +256,6 @@
               van de adviseur of het protocolnummer van de notaris.
             </p> -->
 
-
-          
             <fieldset class="hiddenRadio">
               <legend>Vul een van de drie in:</legend>
               <label> 
@@ -262,16 +264,6 @@
                 name="authorizedPersonInfo">
                 BSN of RSIN van gemachtigde
               </label>
-
-              <label class="oneOfThree">Bsn/RSIN gemachtigde
-                <input
-                  type="text"
-                  minlength="8"
-                  maxlength="9"
-                  name="bsnGemachtigde"
-                  inputmode="numeric"
-              /></label>
-
               <label> 
                 <input 
                 type="radio" 
@@ -279,11 +271,6 @@
                 name="authorizedPersonInfo">
                 Het beconnummer van de adviseur
               </label>
-              <label class="oneOfThree">Beconnummer adviseur
-                <input
-                  type="text"
-                  name="beconNummerAdviseur"
-              /></label>
 
               <label> 
                 <input 
@@ -292,12 +279,44 @@
                 name="authorizedPersonInfo">
                 Het protocolnummer van de notaris
               </label>
-              <label class="oneOfThree">Protocolnummer notaris
-                <input
-                  type="number"
-                  name="protocolnummerNotarisGemachtigde"
-              /></label>
             </fieldset>
+
+              <label>Bsn/RSIN gemachtigde
+              <input
+                required
+                class="addJsErrorMessage"
+                type="text"
+                minlength="8"
+                maxlength="9"
+                name="bsnGemachtigde"
+                inputmode="numeric"
+                maxlength="9"
+                pattern="\d*"
+                
+                />
+              </label>
+
+                <label>Beconnummer adviseur
+                <input
+                  required
+                  maxlength="9"
+                  pattern="\d*"
+                  class="addJsErrorMessage"
+                  type="text"
+                  name="beconNummerAdviseur"
+                /></label>
+
+                <label>Protocolnummer notaris
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  class="addJsErrorMessage"
+                  name="protocolnummerNotarisGemachtigde"
+                  minlength="6"
+                  maxlength="6"
+                />
+              </label>
+              <p class="error-hidden" id="error-id" aria-live="polite"></p>
 
             <div>
                 <label for="firstNameAutorizedPerson">
@@ -330,6 +349,8 @@
               />
             </div>
           </fieldset>
+
+
           <fieldset>
             <legend>
                 Bent u ingeschreven op een adres binnen of buitenland?

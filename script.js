@@ -71,8 +71,6 @@ function addRequired(event){
 // Datum aanpassen van de date pikker naar huidige datum
 function setCurrentDateToPicker(){
     let calender = document.querySelector('[type="date"]');
-    
-
     const today = new Date();
     const pastDate = new Date(today);
 
@@ -82,7 +80,6 @@ function setCurrentDateToPicker(){
     const dateFormatter = today.toISOString().split("T")[0];
     const previousDateFormatter = pastDate.toISOString().split("T")[0];
    
-
     calender.value = dateFormatter;
     // max datum op vandaag 
     calender.setAttribute('max', dateFormatter);
@@ -106,8 +103,7 @@ setCurrentDateToPicker()
  const initialsInput = document.querySelector('#firstnameDeseased');
  const initialsInputs = document.querySelector('.initialenInput');
 
-
-initialsInput.addEventListener('input', (event) => {
+ initialsInput.addEventListener('input', (event) => {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
      initialsInput.value = initialsInput.value.toUpperCase() + '.';
@@ -122,6 +118,56 @@ initialsInput.addEventListener('input', (event) => {
     } 
     
 });
+
+
+
+
+// een extra validatie via javascript op de wie van de drie vragen
+const allInputs = document.querySelectorAll('input')
+const inputsAuthorizedPersonInfo = document.querySelectorAll('.addJsErrorMessage');
+const succes = document.querySelectorAll('.succes-hidden');
+const error = document.querySelector('.error-hidden');
+
+// Positieve validatie
+allInputs.forEach(input => {
+    input.addEventListener('blur', (event) => {
+  if(event.target.validity.valid) {
+//     Handmatig message toevoegen
+    succes.textContent = "Ja dit klopt helemaal! "
+//  werkt alleen op submit
+    event.target.classList.add('input-succes')
+    event.target.setAttribute('aria-describedby', 'succes-id')    
+  } else {
+    succes.textContent = ""
+    event.target.classList.remove('input-succes')
+    event.target.removeAttribute('aria-describedby')
+  }
+});
+})
+
+// Error meldingen met javascript voor de gegevens van gemachtigde
+// Om toch een andere manier te kunnen laten zien
+inputsAuthorizedPersonInfo.forEach(input => {
+    input.addEventListener('blur', (event) => {
+  if(!event.target.validity.valid) {
+//     Handmatig message toevoegen
+    error.textContent = "Sorry dit klopt niet doe het zo Protocolnummer: 000 0001, Bsn: 12345678 en beconnummer 123456"
+//  werkt alleen op submit
+    event.target.classList.add('input-error')
+    event.target.setAttribute('aria-describedby', 'error-id')    
+  } else {
+    error.textContent = ""
+    event.target.classList.remove('input-error')
+    event.target.removeAttribute('aria-describedby')
+  }
+});
+})
+
+
+
+
+
+
 
 
 

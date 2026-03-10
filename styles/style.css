@@ -167,6 +167,16 @@ fieldset:has( > label > input[type="radio"]:not(:indeterminate)) > legend::after
   aspect-ratio: 1;
 }
 
+.error-hidden {
+  color: var(--error-color);
+  font-size: var(--body-text-small);
+}
+
+.succes-hidden {
+   color: var(--success-color);
+  font-size: var(--body-text-small);
+}
+
 /**************************************/
 /*          MARK: Algemene styling    */
 /**************************************/
@@ -264,17 +274,25 @@ header {
 }
 
 /**************************************/
-/*   MARK: wie van de 3           */
+/*   MARK: Gemachtigde vraag: wie van de 3           */
 /**************************************/
-label > input[name="authorizedPersonInfo"] > .oneOfThree {
+.hiddenRadio {
+  margin-bottom: 0;
+}
+
+.hiddenRadio + label, .hiddenRadio + label + label, .hiddenRadio + label + label + label{
   display: none;
-}
- 
-label > input[name="authorizedPersonInfo"]:nth-of-type(1):checked > .oneOfThree:nth-of-type(1){
-  display: block;
+  margin-bottom: var(--spacing-gap-s);
 }
 
+.hiddenRadio:has(input[value="bsnAuthorizedPerson"]:checked) + label,
+.hiddenRadio:has(input[value="beconNumberAdvisor"]:checked) + label + label,
+.hiddenRadio:has(input[value="protocolnumberNotaryAuthorizedPerson"]:checked) + label + label + label
+  {
+  display: flex;
+  flex-direction: column;
 
+}
 
 /**************************************/
 /*   MARK: Button styling             */
