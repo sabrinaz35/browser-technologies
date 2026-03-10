@@ -266,13 +266,13 @@ header {
 /**************************************/
 /*   MARK: wie van de 3           */
 /**************************************/
-/* .oneOfThree {
+label > input[name="authorizedPersonInfo"] > .oneOfThree {
   display: none;
 }
  
-input[name="bsnGemachtigde"]:checked + .oneOfThree:nth-of-type(1){
+label > input[name="authorizedPersonInfo"]:nth-of-type(1):checked > .oneOfThree:nth-of-type(1){
   display: block;
-} */
+}
 
 
 

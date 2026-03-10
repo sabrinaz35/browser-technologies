@@ -353,6 +353,7 @@ Maar zodra je doet wat ik hieronder doe, dan valt het over het volgende block me
 Is dat het dan waard om het zo aan te passen naar een multi scherm form? 
 
 ##### Wat heb je vandaag gedaan?
+- Uitgeprobeerd met de uitklap animatie via de methode height en opacity.
 ##### Hoelang heeft dat geduurt?
 ##### Wat heb je geleerd?
 ##### Wat ga je morgen doen?

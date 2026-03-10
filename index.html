@@ -254,43 +254,50 @@
 
 
           
-            <fieldset>
-                <legend>Vul een van de drie in:</legend>
+            <fieldset class="hiddenRadio">
+              <legend>Vul een van de drie in:</legend>
               <label> 
-                <input type="radio" value="bsnAuthorizedPerson" name="authorizedPersonInfo">
+                <input type="radio" 
+                value="bsnAuthorizedPerson" 
+                name="authorizedPersonInfo">
                 BSN of RSIN van gemachtigde
               </label>
+
+              <label class="oneOfThree">Bsn/RSIN gemachtigde
+                <input
+                  type="text"
+                  minlength="8"
+                  maxlength="9"
+                  name="bsnGemachtigde"
+                  inputmode="numeric"
+              /></label>
+
               <label> 
-                <input type="radio" value="beconNumberAdvisor" name="authorizedPersonInfo">
+                <input 
+                type="radio" 
+                value="beconNumberAdvisor" 
+                name="authorizedPersonInfo">
                 Het beconnummer van de adviseur
               </label>
+              <label class="oneOfThree">Beconnummer adviseur
+                <input
+                  type="text"
+                  name="beconNummerAdviseur"
+              /></label>
+
               <label> 
-                <input type="radio" value="protocolnumberNotaryAuthorizedPerson">
+                <input 
+                type="radio" 
+                value="protocolnumberNotaryAuthorizedPerson"
+                name="authorizedPersonInfo">
                 Het protocolnummer van de notaris
               </label>
+              <label class="oneOfThree">Protocolnummer notaris
+                <input
+                  type="number"
+                  name="protocolnummerNotarisGemachtigde"
+              /></label>
             </fieldset>
-
-            <div>
-            <label class="oneOfThree">Bsn/RSIN gemachtigde
-            <input
-              type="text"
-              minlength="8"
-              maxlength="9"
-              name="bsnGemachtigde"
-              inputmode="numeric"
-            /> </label>
-            <label class="oneOfThree">Beconnummer adviseur
-            <input
-              type="text"
-              name="beconNummerAdviseur"
-            /></label>
-            <label class="oneOfThree" 
-              >Protocolnummer notaris
-            <input
-              type="number"
-              name="protocolnummerNotarisGemachtigde"
-            /></label>
-            </div>
 
             <div>
                 <label for="firstNameAutorizedPerson">
