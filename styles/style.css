@@ -78,38 +78,25 @@
   src: url(/fonts/nssans-bold.woff2);
 }
 
-
-
 /**************************************/
 /* MARK: Generieke code die herbruikbaar is */
 /**************************************/
-
 /* De animatie moet nog gefinetuned worden */
 .hiddenBlock + div {
   display: none;
   /* height: 0;
-  opacity: 0; */
+  opacity: 0;
+  margin: 0;
+  transition: opacity 0.5s ease; */
 }
 
 .hiddenBlock:has([value="yes"]:checked) + div {
   display: block;
-   /* height: fit-content;
-   opacity: 1;
-   animation-name: showBlocks;
-   animation-duration: .15s;
-   animation-timing-function: ease; */
-   /* animation-direction: ; */
+  /* height: auto;
+  opacity: 1;  
+  transition: opacity 0.5s ease; */
 }
 
-@keyframes showBlocks {
-  0% {
-    height: 0;
-  } 50%{
-    height: calc(fit-content - 60%);
-  }100% {
-    height: fit-content;
-  }
-}
 
 /* Error memo appearence herbruikbaar */
 .errorMemo {
@@ -123,6 +110,48 @@ input:user-invalid + .errorMemo {
   color: var(--error-color);
   font-size: var(--body-text-small);
   padding-top: 2px;
+}
+
+/**************************************/
+/*   MARK: keuze vraag         */
+/**************************************/
+/* Bsn, protocolnummer en beconnummer code */
+.hiddenRadio {
+  margin-bottom: 0;
+}
+
+.hiddenRadio + label, .hiddenRadio + label + label, .hiddenRadio + label + label + label{
+  display: none;
+  margin-bottom: var(--spacing-gap-s);
+}
+
+.hiddenRadio:has(input[value="bsnAuthorizedPerson"]:checked) + label,
+.hiddenRadio:has(input[value="beconNumberAdvisor"]:checked) + label + label,
+.hiddenRadio:has(input[value="protocolnumberNotaryAuthorizedPerson"]:checked) + label + label + label
+  {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nederland buitenland code + animatie */
+.hiddenBlock + fieldset, 
+.hiddenBlock + fieldset + fieldset{
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hiddenBlock:has([value="adresNederland"]:checked) + fieldset, 
+.hiddenBlock:has([value="adresBuitenland"]:checked) + fieldset + fieldset{
+  height: auto;
+  opacity: 1;  
+  transition: opacity 0.5s ease;
+
+}
+
+.hiddenBlock:has([value="adresBuitenland"]:checked) + fieldset + fieldset{
+  margin-top: -19.5px;
 }
 
 /**************************************/
@@ -239,6 +268,12 @@ fieldset {
   }
 }
 
+[for="firstNameAutorizedPerson"] {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-border-default);
+}
+
 legend {
   font-family: nssans-bold, sans-serif;
   color: var(--heading-color);
@@ -273,26 +308,7 @@ header {
 }
 }
 
-/**************************************/
-/*   MARK: Gemachtigde vraag: wie van de 3           */
-/**************************************/
-.hiddenRadio {
-  margin-bottom: 0;
-}
 
-.hiddenRadio + label, .hiddenRadio + label + label, .hiddenRadio + label + label + label{
-  display: none;
-  margin-bottom: var(--spacing-gap-s);
-}
-
-.hiddenRadio:has(input[value="bsnAuthorizedPerson"]:checked) + label,
-.hiddenRadio:has(input[value="beconNumberAdvisor"]:checked) + label + label,
-.hiddenRadio:has(input[value="protocolnumberNotaryAuthorizedPerson"]:checked) + label + label + label
-  {
-  display: flex;
-  flex-direction: column;
-
-}
 
 /**************************************/
 /*   MARK: Button styling             */
@@ -314,16 +330,3 @@ button, input[type="file"]::file-selector-button  {
     background-color: var(--background-color-button-hover);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

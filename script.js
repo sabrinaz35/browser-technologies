@@ -1,7 +1,7 @@
 console.log('hello world');
 
 
-// Function voor de reset van de radio buttons van de in en uitklap functie//
+// Function voor de reset van de radio buttons van de in en uitklap functie te legen, dit is bij de eerste vraag.
 // Met hulp van Sanne geschreven
 let inputWithValueNos = document.querySelectorAll('input[value="no"]');
 let inputWithValueYes = document.querySelector('input[value="yes"]');
@@ -42,7 +42,6 @@ function clearInputs(event){
         }
     })
 }
-
 
 // Op basis van de vorige geschreven een required toevoegen aan de volgende button
 inputWithValueYes.addEventListener('change', addRequired);
@@ -97,8 +96,7 @@ function setCurrentDateToPicker(){
 setCurrentDateToPicker()
 
 
-// Validation om te kijken of de initialen in hoofdletters geschreven worden
-// Voor het opzetje van de toLowerCase()
+// Validation om te kijken of de initialen in hoofdletters geschreven worden bij initialen
 // https://stackoverflow.com/questions/1027224/how-can-i-test-if-a-letter-in-a-string-is-uppercase-or-lowercase-using-javascrip 
  const initialsInput = document.querySelector('#firstnameDeseased');
  const initialsInputs = document.querySelector('.initialenInput');
@@ -107,8 +105,7 @@ setCurrentDateToPicker()
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
      initialsInput.value = initialsInput.value.toUpperCase() + '.';
-    
-    // Ik wist dat romy die hoofdletters ook had gedaan dus ik heb aan haar gevraagd hoe zij dat deed
+
     // https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/inputType
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
     //Dus als er op backspace geklikt wordt dan moet de code weg
@@ -116,7 +113,6 @@ setCurrentDateToPicker()
         initialsInput.value = initialsInput.value.slice(0, -1);
         return;
     } 
-    
 });
 
 
@@ -128,7 +124,7 @@ const inputsAuthorizedPersonInfo = document.querySelectorAll('.addJsErrorMessage
 const succes = document.querySelectorAll('.succes-hidden');
 const error = document.querySelector('.error-hidden');
 
-// Positieve validatie
+// Positieve validatie --> misschien niet nodig
 allInputs.forEach(input => {
     input.addEventListener('blur', (event) => {
   if(event.target.validity.valid) {
@@ -150,9 +146,15 @@ allInputs.forEach(input => {
 inputsAuthorizedPersonInfo.forEach(input => {
     input.addEventListener('blur', (event) => {
   if(!event.target.validity.valid) {
-//     Handmatig message toevoegen
-    error.textContent = "Sorry dit klopt niet doe het zo Protocolnummer: 000 0001, Bsn: 12345678 en beconnummer 123456"
-//  werkt alleen op submit
+
+    if(event.target.name == 'bsnGemachtigde') {
+        error.textContent = "Sorry dit klopt niet doe het zo Bsn: 12345678"
+    } else if(event.target.name == 'beconNummerAdviseur') {
+        error.textContent = "Sorry dit klopt niet doe het zo Beconnummer 123456"
+    } else {
+        error.textContent = "Sorry dit klopt niet doe het zo Protocolnummer: 000 0001"
+    }
+
     event.target.classList.add('input-error')
     event.target.setAttribute('aria-describedby', 'error-id')    
   } else {

@@ -350,13 +350,39 @@ Morgen wil ik verder aan de tweede pattern welke van de drie en alvast ook een s
 Maar zodra je doet wat ik hieronder doe, dan valt het over het volgende block met vragen heen en die kan je dan niet invullen, dus dit zou wel werken als je de vragen los van elkaar toont.
 <img src="/readme-images/transition-progressive-disclosure.png" alt="javascript code met daarin de functie van de backspace" width="300px">
 
-Is dat het dan waard om het zo aan te passen naar een multi scherm form? 
+Uiteindelijk ben ik toch even gaan focussen op een ander punt en ben ik aan de slag gegaan met de pattern. De keuze maken tussen drie radio buttons en dan een veld laten zien
+
+<img src="/readme-images/radio-keuze-fix.png" alt="fixen met css dat een van de drie een keuze gemaakt kan worden" width="300px">
+
+Uiteindelijk ben ik daarmee door te gaan en heb ik aan de hand van de workshop een validatie geschreven voor die input fiels, alleen een algemene die best lang is maar het werkt wel.
+
+<img src="/readme-images/custom-validation-java.png" alt="visueel de error message" width="300px">
+<img src="/readme-images/custom-validation-javascript-code.png" alt="code voor de error message" width="300px">
+
+<img src="/readme-images/error-message-specifiek-anders.png" alt="specifieke code aangepast per input type" width="300px">
+Alleen als je nu een andere button aanklikt dan blijft de error message van de vorige staan, wat niet moet, dus eigenlijk zou hij moeten resetten op het moment dat je een andere button kiest. 
+
+Is dat het dan waard om het zo aan te passen naar een multi scherm form?
+Is het interessant om dit generiek te maken? 
 
 ##### Wat heb je vandaag gedaan?
 - Uitgeprobeerd met de uitklap animatie via de methode height en opacity.
+- Javascript custom validation code geschreven (moet alleen nog kijken naar de memo om die korter te doen)
+- Een van de drie keuze gemaakt met css. Wanr progressive enhancement.
+- verder gegaan met transistions maken voor de progressive disclosure
+
 ##### Hoelang heeft dat geduurt?
+- 09:30 - 10:00 intro + weekly geek
+- 10:30 - 12:00 workshop victor
+- 12:00 - 13:00 Pauze
+- 13:00 - 16:00 werken aan de punten die ik hiervoor heb genoemd
+
 ##### Wat heb je geleerd?
+- ik heb geleerd hoe je een transition zet op een progressive disclosure 
+- hoe je via javascript een validation doet 
+
 ##### Wat ga je morgen doen?
+Morgen ga ik verder werken aan de transitions en kijken waar voor mij nog de uitdagingen liggen.
 
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
