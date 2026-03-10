@@ -283,7 +283,6 @@
 
               <label>Bsn/RSIN gemachtigde
               <input
-                required
                 class="addJsErrorMessage"
                 type="text"
                 minlength="8"
@@ -298,7 +297,6 @@
 
                 <label>Beconnummer adviseur
                 <input
-                  required
                   maxlength="9"
                   pattern="\d*"
                   class="addJsErrorMessage"
@@ -356,7 +354,7 @@
                 Bent u ingeschreven op een adres binnen of buitenland?
             </legend>
             <label>
-                <input type="radio" name="adressAuthorizsedPerson" value="adresNederland"/>
+                <input required type="radio" name="adressAuthorizsedPerson" value="adresNederland"/>
                 Adres in Nederland
               </label>
               <label>
@@ -374,6 +372,7 @@
                   type="text"
                   name="straatNaamGemachtigde"
                   id="streetNameAuthorizedPerson"
+                  
                 />
                 <label for="houseNumberAuthorizedPerson">Huisnummer</label>
                 <input
@@ -392,11 +391,12 @@
                 <label for="postalcodeAuthorizedPerson">Postcode</label>
                <!-- https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code -->
                 <input
-                  pattern="[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$"
+                  pattern="^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$"
                   type="text"
                   name="postcodeGemachtigde"
                   id="postalcodeAuthorizedPerson"
                 />
+                 <p class="errorMemo">Sorry, je postcode moet voldoen aan het volgende format 1000AA</p>
                 <label for="locationAuthorizedPerson">Woonplaats</label>
                 <input
                   type="text"

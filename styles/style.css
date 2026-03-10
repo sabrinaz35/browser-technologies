@@ -145,8 +145,9 @@ input:user-invalid + .errorMemo {
 .hiddenBlock + fieldset + fieldset{
   height: 0;
   opacity: 0;
-  margin: 0;
   transition: opacity 0.5s ease;
+
+  margin-left: -100rem;
 }
 
 .hiddenBlock:has([value="adresNederland"]:checked) + fieldset, 
@@ -155,6 +156,7 @@ input:user-invalid + .errorMemo {
   opacity: 1;  
   transition: opacity 0.5s ease;
 
+  margin: 0;
 }
 
 .hiddenBlock:has([value="adresBuitenland"]:checked) + fieldset + fieldset{
@@ -332,6 +334,7 @@ button, input[type="file"]::file-selector-button  {
 
   width: 10rem;
   align-self: center;
+  justify-self: center;
 
   &:hover {
     background-color: var(--background-color-button-hover);

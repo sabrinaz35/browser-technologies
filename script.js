@@ -1,16 +1,15 @@
 console.log('hello world');
 
 
+// MARK: clear inputs
 // Function voor de reset van de radio buttons van de in en uitklap functie te legen, dit is bij de eerste vraag.
 // Met hulp van Sanne geschreven
 let inputWithValueNos = document.querySelectorAll('input[value="no"]');
 let inputWithValueYes = document.querySelector('input[value="yes"]');
 
-
 inputWithValueNos.forEach( function(inputWithValueNos){
     inputWithValueNos.addEventListener('change', clearInputs)
 }) 
-
 
 function clearInputs(event){
     console.log(event)
@@ -67,6 +66,8 @@ function addRequired(event){
 
 
 
+
+// MARK: Datum vandaag
 // Datum aanpassen van de date pikker naar huidige datum
 function setCurrentDateToPicker(){
     let calender = document.querySelector('[type="date"]');
@@ -96,50 +97,35 @@ function setCurrentDateToPicker(){
 setCurrentDateToPicker()
 
 
+
+
+//MARK: Generieke code voor de hoofdletters van de initialen
 // Validation om te kijken of de initialen in hoofdletters geschreven worden bij initialen
 // https://stackoverflow.com/questions/1027224/how-can-i-test-if-a-letter-in-a-string-is-uppercase-or-lowercase-using-javascrip 
- const initialsInput = document.querySelector('#firstnameDeseased');
- const initialsInputs = document.querySelector('.initialenInput');
+const initialsInputs = document.querySelectorAll('.initialenInput');
 
- initialsInput.addEventListener('input', (event) => {
+initialsInputs.forEach(input => {
+    input.addEventListener('input', (event) => {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
-     initialsInput.value = initialsInput.value.toUpperCase() + '.';
+     input.value = input.value.toUpperCase() + '.';
 
     // https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/inputType
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
     //Dus als er op backspace geklikt wordt dan moet de code weg
     if (event.inputType === 'deleteContentBackward') {
-        initialsInput.value = initialsInput.value.slice(0, -1);
+        input.value = input.value.slice(0, -1);
         return;
     } 
-});
-
-
-
-
-// een extra validatie via javascript op de wie van de drie vragen
-const allInputs = document.querySelectorAll('input')
-const inputsAuthorizedPersonInfo = document.querySelectorAll('.addJsErrorMessage');
-const succes = document.querySelectorAll('.succes-hidden');
-const error = document.querySelector('.error-hidden');
-
-// Positieve validatie --> misschien niet nodig
-allInputs.forEach(input => {
-    input.addEventListener('blur', (event) => {
-  if(event.target.validity.valid) {
-//     Handmatig message toevoegen
-    succes.textContent = "Ja dit klopt helemaal! "
-//  werkt alleen op submit
-    event.target.classList.add('input-succes')
-    event.target.setAttribute('aria-describedby', 'succes-id')    
-  } else {
-    succes.textContent = ""
-    event.target.classList.remove('input-succes')
-    event.target.removeAttribute('aria-describedby')
-  }
-});
 })
+});
+
+
+
+// MARK: Validatie via javascript
+// een extra validatie via javascript op de wie van de drie vragen
+const inputsAuthorizedPersonInfo = document.querySelectorAll('.addJsErrorMessage');
+const error = document.querySelector('.error-hidden');
 
 // Error meldingen met javascript voor de gegevens van gemachtigde
 // Om toch een andere manier te kunnen laten zien
@@ -154,7 +140,6 @@ inputsAuthorizedPersonInfo.forEach(input => {
     } else {
         error.textContent = "Sorry dit klopt niet doe het zo Protocolnummer: 000 0001"
     }
-
     event.target.classList.add('input-error')
     event.target.setAttribute('aria-describedby', 'error-id')    
   } else {
@@ -163,6 +148,28 @@ inputsAuthorizedPersonInfo.forEach(input => {
     event.target.removeAttribute('aria-describedby')
   }
 });
+
+// const allInputs = document.querySelectorAll('input');
+// const succes = document.querySelectorAll('.succes-hidden');
+
+
+// Positieve validatie --> misschien niet nodig
+// allInputs.forEach(input => {
+//     input.addEventListener('blur', (event) => {
+//   if(event.target.validity.valid) {
+// //     Handmatig message toevoegen
+//     succes.textContent = "Ja dit klopt helemaal! "
+// //  werkt alleen op submit
+//     event.target.classList.add('input-succes')
+//     event.target.setAttribute('aria-describedby', 'succes-id')    
+//   } else {
+//     succes.textContent = ""
+//     event.target.classList.remove('input-succes')
+//     event.target.removeAttribute('aria-describedby')
+//   }
+// });
+// })
+
 })
 
 
