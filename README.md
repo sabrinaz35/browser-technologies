@@ -391,6 +391,8 @@ Ik kon het toch niet loslaten dat mijn transition niet werkte en dat heb ik opge
 
 De reden dat ik wel ben gegaan voor de transitions is om de UX van het formulier beter te maken, de gebruiker die ziet voorzichtig de volgende vraag verschijnen en heeft niet een verward idee van waarom er plots uit het niets iets gebeurd maar wat.
 
+<img src="/readme-images/button-popover-1.png" alt="button popover code" width="300px">
+
 ### Maandag 16 maart
 #### Proces vandaag
 
