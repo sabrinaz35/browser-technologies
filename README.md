@@ -407,6 +407,9 @@ Voor html inputs:
 Html postcode pattern:
 - https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code 
 
+Aria-labels: 
+- https://eye-able.com/nl/blog/aria-label
+
 ### Css bronnen
 Design system NS en fonts: 
 - https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system 
