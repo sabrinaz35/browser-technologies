@@ -23,20 +23,20 @@
           <fieldset>
             <legend class="heading">Persoonsgegevens overledene </legend>
             <div>
-              <label for="firstnameDeseased"> Voorletter(s) </label>
+              <label for="firstnameDeseased"> Voorletter(s) <span>*</span></label>
               <input
                 required
                 aria-describedby="errorMessageName"
                 type="text"
                 name="firstnameDeseased"
+                min="1"
                 value=""
                 id="firstnameDeseased"
                 class="initialenInput"
                 aria-describedby="errorMessageName"
               />
 
-              <p id="errorMessageName" class="errorMemo">Sorry, dit veld moet meer dan 2 tekens hebben</p>
-              <!-- <p class="succes-hidden" id="succes-id" aria-live="polite"></p> -->
+              <p id="errorMessageName" class="errorMemo">Sorry, dit veld is onjuist ingevuld. Vul minimaal één character in.</p>
 
               <label for="tussenvoegsel"> Tussenvoegsel(s) </label>
               <input
@@ -45,7 +45,7 @@
                 value=""
                 id="tussenvoegsel"
               />
-              <label for="SurnameDeseased"> Achternaam </label>
+              <label for="SurnameDeseased"> Achternaam<span>*</span> </label>
               <input
                 required
                 type="text"
@@ -57,7 +57,7 @@
             </div>
 
             <div>
-              <label for="bsnDeseased"> Bsn overledene </label>
+              <label for="bsnDeseased"> Bsn overledene <span>*</span> </label>
               <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number -->
               <!-- Het werkt nog niet helemaal  -->
               <input
@@ -70,7 +70,7 @@
                 id="bsnDeseased"
               />
               <p class="errorMemo">Sorry dit is niet goed, bsn bestaat uit 9 cijfers</p>
-              <label for="DeseaseDate"> Overlijdensdatum </label>
+              <label for="DeseaseDate"> Overlijdensdatum <span>*</span> </label>
               <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date -->
               <input 
               type="date" 
@@ -114,7 +114,7 @@
             <fieldset class="hiddenBlock">
               <legend>
                 Was de overledene getrouwd of had de overledene een
-                geregistreerde partner op het moment van overlijden?
+                geregistreerde partner op het moment van overlijden? <span>*</span>
               </legend>
               <label>
                 <input 
@@ -354,6 +354,7 @@
                 id="firstNameAutorizedPerson"
                 class="initialenInput"
               />
+              <p class="errorMemo">Sorry, dit veld is onjuist ingevuld. Vul minimaal één character in.</p>
               <label for="prefixAuthorizedPerson">
                 Tussenvoegsel(s) gemachtigde
               </label>
@@ -372,6 +373,7 @@
                 name="achternaamGemachtigde"
                 id="lastnameAuthorizedPerson"
               />
+              <p class="errorMemo">Sorry, dit veld is onjuist ingevuld. Vul minimaal één character in.</p>
             </div>
           </fieldset>
 

@@ -393,8 +393,23 @@ De reden dat ik wel ben gegaan voor de transitions is om de UX van het formulier
 
 <img src="/readme-images/button-popover-1.png" alt="button popover code" width="300px">
 
+### Wekelijkse reflectie 13 maart
+Vandaag zijn we weer ieder zijn website langs gegaan en hebben het over de verschillende functionaliteiten gehad en wanneer is het af. Hierin kan je het beste zelf keuzes in maken. Maar voor de overige dingen kan je een als ik meer tijd had voor schrijven.
+
+Ik wil nog verder werken aan de pop-up van de extra informatie en daar ga ik met anchor positioning naar kijken en ik wil nog de functionaliteit bij de persoonsgegevens van de gemachtigde kijken zodra er een ander deel is ingevuld dat de foutmelding ook weg gaat.
+
+margin -10px mag!
+
 ### Maandag 16 maart
 #### Proces vandaag
+Ik heb gekeken naar de verschillende focus states en als ik door mijn website heen tab alleen dan tabt hij ook door de verschillende velden die ik hidden heb gezet. Dit heb ik op die manier gedaan om een betere user exerience te creeeren om een transition te kunnen geven bij het openklappen, maar dat gaat dan weer ten koste van de tab functionaliteit en hoogstwaarschijnlijk ook mijn screenreader.
+
+
+
+#### Aanbeveling als ik meer tijd had dan...
+- Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
+- Bij de initialen die zij moeten invullen, de mogelijkheid van het verwijderen van 1 punt weglaten en daar een functie voor schrijven in javascript. 
+- Bij meer inputs een pattern toevoegen in de html
 
 
 ## Bronvermelding

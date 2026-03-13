@@ -160,7 +160,8 @@ input:user-invalid + .errorMemo {
 }
 
 .hiddenBlock:has([value="adresBuitenland"]:checked) + fieldset + fieldset{
-  margin-top: -19.5px;
+  /* margin-top: -19.5px; */
+    margin-top: -45px;
 }
 
 /**************************************/
@@ -273,6 +274,10 @@ fieldset {
 
     &[type="file"] {
       margin-top: var(--spacing-gap-m);
+    }
+
+    &::focus {
+      border-color: var( --brand-color-primary);
     }
   }
 }
