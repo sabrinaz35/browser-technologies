@@ -404,12 +404,25 @@ margin -10px mag!
 #### Proces vandaag
 Ik heb gekeken naar de verschillende focus states en als ik door mijn website heen tab alleen dan tabt hij ook door de verschillende velden die ik hidden heb gezet. Dit heb ik op die manier gedaan om een betere user exerience te creeeren om een transition te kunnen geven bij het openklappen, maar dat gaat dan weer ten koste van de tab functionaliteit en hoogstwaarschijnlijk ook mijn screenreader.
 
+Tijdens het maken van de informatie button bij een vraag wilde ik gebruik maken van de anchor-positioning. Alleen de eerste positie werkt wel, maar de fallback werkt niet. Ik ben naar Vasilis gegaan alleen samen kwamen wij er ook niet uit. 
+<img src="/readme-images/anchor-positioning.png" alt="anchor positioning" width="300px">
 
+Als ik Sanne tegenkom dan ga ik aan hem vragen of hij mij kan helpen en anders heb ik nog een backup plan, door er een media querie van te maken alleen dat is niet helemaal user friendly en staat minder netjes in de code.
+
+Uiteindelijk ben ik ook geswitcht van een popover naar een dialog, omdat bij een dialog heb je een attribute waar je het mee je dat stukje venster kan sluiten. Dan gaat de popover ook niet weg als je ernaast klikt.
+
+Bij de telefoon moet je bij de dialog scrollen, stel een gebruiker klikt er per ongeluk naast dan is de popover weg, daarom heb ik de keuze gemaakt om het een dialog te maken, dan kunnen de mensen de informatie lezen en tergelijkertijd invullen van de velden.
+
+<img src="/readme-images/popover-to-dialog.png" alt="popover veranderd" width="300px">
+
+Daarnaast is het voor de screenreader beter te begrijpen wat het is, in eerste instantie had ik er een article van gemaakt, maar door dialog te gebruiken herkent de screenreader het ook meteen als een popover element.
+<!-- https://medium.com/@disane1987/better-dialogs-in-html-with-dialog-dde46b4c120d -->
 
 #### Aanbeveling als ik meer tijd had dan...
 - Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
 - Bij de initialen die zij moeten invullen, de mogelijkheid van het verwijderen van 1 punt weglaten en daar een functie voor schrijven in javascript. 
 - Bij meer inputs een pattern toevoegen in de html
+- Meer inlezen op anchor positioning, zodat dat werkt en ik niet een mediaquerie hoef te gebruiken, zo blijft de code schoner en is het voor de gebruiker fijner werken. 
 
 
 ## Bronvermelding
@@ -427,6 +440,9 @@ Html postcode pattern:
 Aria-labels: 
 - https://eye-able.com/nl/blog/aria-label
 
+Dialog:
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog 
+
 ### Css bronnen
 Design system NS en fonts: 
 - https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system 
@@ -436,6 +452,7 @@ Design system NS en fonts:
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position 
 - https://www.figma.com/community/plugin/1498729606631593833/iconify-icons-library --> Via figma gebruikt voor het icoontje
 - https://css-tricks.com/form-validation-ux-html-css/ 
+- https://developer.chrome.com/docs/css-ui/anchor-positioning-api?hl=nl + hulp van Vasilis
 
 ### Geraadpleegde site voor Javascript:
 - https://stackoverflow.com/questions/9887360/how-can-i-check-if-a-checkbox-is-checked 

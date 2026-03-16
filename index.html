@@ -79,8 +79,10 @@
               value="2026-03-02"
               />
               <!-- https://eye-able.com/nl/blog/aria-label -->
-              <button type="button" popovertarget="popover-info" aria-label="Open info popup" aria-expanded="false" aria-haspopup="true" aria-controls="popover-info">Info </button>
-              <article popover="hint" id="popover-info">
+               <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog -->
+              <button data-dialog-action="showModal" aria-controls="popover-info" type="button" popovertarget="popover-info" aria-label="Open info popup" aria-expanded="false" aria-haspopup="true" aria-controls="popover-info"><img src="images/cuida_info-outline.png" alt="Meer informatie button"></button>
+              <dialog popover="manual" id="popover-info">
+                <button type="button" popovertarget="popover-info" popovertargetaction="hide" aria-controls="popover-info">X</button>
                 <h2> Wanneer moet u aangifte erfbelasting doen?</h2>
                 <p>Wij sturen een brief waarin staat of de erfgenamen aangifte
                     moeten doen of niet. Dit doen we binnen 4 maanden na
@@ -103,7 +105,7 @@
                     kan online op Mijn Belastingdienst of met een papieren
                     aangifteformulier. 
                   </p>
-              </article>
+                </dialog>
             </div>
           </fieldset>
 

@@ -27,6 +27,9 @@
   --success-color: light-dark(#3e7f67, #4dcda5);
   --error-color: light-dark(#ce092d, #ff9396);
 
+  --shadow-elevated-2:0px 2px 12px 0px rgba(0, 0, 0, 0.24), 
+0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+
   /* HOVER COLORS */
   --background-color-button-hover: light-dark(#0b44a1, #9ac5f1);
   --color-border-input-hover:light-dark( #73747a,#979798);
@@ -288,6 +291,7 @@ fieldset {
   border-top: 1px solid var(--color-border-default);
 }
 
+
 legend {
   font-family: nssans-bold, sans-serif;
   color: var(--heading-color);
@@ -332,7 +336,7 @@ span {
 /**************************************/
 
 /* https://www.geeksforgeeks.org/html/how-to-style-the-input-file-type-in-forms-using-css/ */
-button, input[type="file"]::file-selector-button  {
+button:not([popovertarget="popover-info"]), input[type="file"]::file-selector-button  {
   border: none;
   background-color: var(--background-color-button);
   border-radius: var(--border-radius-default);
@@ -346,5 +350,90 @@ button, input[type="file"]::file-selector-button  {
 
   &:hover {
     background-color: var(--background-color-button-hover);
+  }
+}
+
+
+
+/* MARK: Styling popup */
+dialog {
+  padding: var(--padding-insert-m);
+  margin: 8rem 10px 0rem 10rem;
+  border-radius: var(--border-radius-large);
+  border-color: var(--color-border-default);
+  box-shadow: var(--shadow-elevated-2);
+  max-width: 20rem;
+  max-height: 24rem;
+
+/* https://developer.chrome.com/docs/css-ui/anchor-positioning-api?hl=nl */
+  position: absolute;
+  position-anchor: --anchor-info-popup;
+  position-area: top right;
+  /* right: anchor(center); */
+  /* top: anchor(center);
+  position-try-fallbacks: flip-block;
+  position-visibility: anchors-visible; */
+
+
+
+    h2 {
+      font-family: nssans-bold, sans-serif;
+      color: var(--heading-color);
+      font-size: var(--heading-2-web);
+      margin-bottom: var(--padding-insert-s);
+    }
+}
+
+/* positioning with anker */
+[popovertarget="popover-info"]{
+  anchor-name: --anchor-info-popup;
+  
+
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+ 
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  [popovertargetaction="hide"]{
+    place-self: end;
+  }
+}
+
+
+
+  @position-try --smallscreen {
+  /* position-area: top center; */
+  /* right: anchor(bottom); */
+  /* width: 10rem; */
+  }
+
+
+@media (width< 700px) {
+  dialog {
+      max-width: 30rem;
+      margin: 32px 32px 4rem 32px;
+      position-area: top center;
+
+  }
+}
+
+@media(width>1160px) {
+  dialog {
+    padding: var(--padding-insert-m);
+    margin: 8rem 10px 0rem 33rem;
+    border-radius: var(--border-radius-large);
+    border-color: var(--color-border-default);
+    box-shadow: var(--shadow-elevated-2);
+    max-width: 25rem;
+    max-height: 40rem;
+    position: absolute;
+    position-anchor: --anchor-info-popup;
+    position-area: top right;
   }
 }
