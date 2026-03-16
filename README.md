@@ -418,6 +418,7 @@ Bij de telefoon moet je bij de dialog scrollen, stel een gebruiker klikt er per 
 Daarnaast is het voor de screenreader beter te begrijpen wat het is, in eerste instantie had ik er een article van gemaakt, maar door dialog te gebruiken herkent de screenreader het ook meteen als een popover element.
 <!-- https://medium.com/@disane1987/better-dialogs-in-html-with-dialog-dde46b4c120d -->
 
+Met Matthew, Jacco  en Nienke heb ik de checkout gedaan. Zij zijn met verschillende dingen bezig geweest zoals progressive disclosure en nog wat kleine extra toevoegingen,
 
 ##### Wat heb je vandaag gedaan?
 Vandaag ben ik bezig geweest met anchor positioning, wat niet helemaal werkte. Uiteindelijk heb ik daaronder wel een bakckup gevonden, waarbij ik het met @media doe, maar dat is niet de juiste manier om dit te doen.
@@ -432,7 +433,7 @@ Uiteindelijk ben ik ook nog bezig geweest met de foutcode die in de kies een van
 - 16:00 checkout
 
 ##### Wat heb je geleerd?
-- Geleerd hoe ik 
+- Meer gespeeld met de media querie en hoe ik de positie van de popup wil laten zien. 
 
 ##### Wat ga je morgen doen?
 Morgen ga ik de puntjes op de i zetten en kijken of anchor positioning lukt. En de styling en positionering van de popup en het xje erin fixen en mooier maken.

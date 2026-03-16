@@ -27,8 +27,7 @@
   --success-color: light-dark(#3e7f67, #4dcda5);
   --error-color: light-dark(#ce092d, #ff9396);
 
-  --shadow-elevated-2:0px 2px 12px 0px rgba(0, 0, 0, 0.24), 
-0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    --shadow-elevated-2:0px 2px 12px 0px rgba(0, 0, 0, 0.24);
 
   /* HOVER COLORS */
   --background-color-button-hover: light-dark(#0b44a1, #9ac5f1);
@@ -360,11 +359,12 @@ button:not([popovertarget="popover-info"]), input[type="file"]::file-selector-bu
 /* MARK: Styling popup */
 dialog {
   padding: var(--padding-insert-m);
-  margin: 8rem 10px 0rem 10rem;
+  margin: 8rem 10px 0rem 3rem;
   border-radius: var(--border-radius-large);
   border-color: var(--color-border-default);
   box-shadow: var(--shadow-elevated-2);
-  max-width: 20rem;
+
+  max-width: 30rem;
   max-height: 24rem;
 
 /* https://developer.chrome.com/docs/css-ui/anchor-positioning-api?hl=nl */
@@ -418,7 +418,6 @@ dialog {
 
 @media (width< 500px) {
   dialog {
-      max-width: 30rem;
       margin: 32px 32px 4rem 32px;
       position-area: top center;
 
