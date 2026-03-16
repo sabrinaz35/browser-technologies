@@ -230,6 +230,7 @@ body {
 header {
   background-color: var(--background-color-brand-primary);
   padding: var(--spacing-inset-m);
+  place-items: center;
 }
 
 form {
@@ -321,6 +322,7 @@ label{
 /* De warning tekst */
 header {
   p:first-of-type {
+  font-family: nssans-bold, sans-serif;
   font-size: var(--body-text-large);
   color: var(--warning-color);
 }
@@ -414,7 +416,7 @@ dialog {
   }
 
 
-@media (width< 700px) {
+@media (width< 500px) {
   dialog {
       max-width: 30rem;
       margin: 32px 32px 4rem 32px;

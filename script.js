@@ -58,6 +58,8 @@ function addRequired(event){
 
       if(previousRadioPushed.value === "yes") {
         nextDivInput.setAttribute("required","");
+        } else {
+            nextDivInput.removeAttribute("required","");
         }
 
     
@@ -126,55 +128,56 @@ initialsInputs.forEach(input => {
 // een extra validatie via javascript op de wie van de drie vragen
 const inputsAuthorizedPersonInfo = document.querySelectorAll('.addJsErrorMessage');
 const error = document.querySelector('.error-hidden');
+const allRadioGemachtigde = document.querySelectorAll('input[name="authorizedPersonInfo"]');
 
 // Error meldingen met javascript voor de gegevens van gemachtigde
 // Om toch een andere manier te kunnen laten zien
 inputsAuthorizedPersonInfo.forEach(input => {
     input.addEventListener('blur', (event) => {
-  if(!event.target.validity.valid) {
 
-    if(event.target.name == 'bsnGemachtigde') {
+  if(!event.target.validity.valid) {
+    if(event.target.name == 'bsnAuthorizedPerson') {
         error.textContent = "Sorry dit klopt niet doe het zo Bsn: 12345678"
-    } else if(event.target.name == 'beconNummerAdviseur') {
+
+    } else if(event.target.name == 'beconNumberAdvisor') {
         error.textContent = "Sorry dit klopt niet doe het zo Beconnummer 123456"
+
     } else {
         error.textContent = "Sorry dit klopt niet doe het zo Protocolnummer: 000 0001"
     }
     event.target.classList.add('input-error')
     event.target.setAttribute('aria-describedby', 'error-id')    
   } else {
-    error.textContent = ""
+    error.textContent = " "
     event.target.classList.remove('input-error')
     event.target.removeAttribute('aria-describedby')
   }
 });
-
-// const allInputs = document.querySelectorAll('input');
-// const succes = document.querySelectorAll('.succes-hidden');
-
-
-// Positieve validatie --> misschien niet nodig
-// allInputs.forEach(input => {
-//     input.addEventListener('blur', (event) => {
-//   if(event.target.validity.valid) {
-// //     Handmatig message toevoegen
-//     succes.textContent = "Ja dit klopt helemaal! "
-// //  werkt alleen op submit
-//     event.target.classList.add('input-succes')
-//     event.target.setAttribute('aria-describedby', 'succes-id')    
-//   } else {
-//     succes.textContent = ""
-//     event.target.classList.remove('input-succes')
-//     event.target.removeAttribute('aria-describedby')
-//   }
-// });
-// })
-
 })
 
+/** Bron: Chatgpt
+ *  Prompt: Ik wil dat als een van de drie radio buttons aangeklikt is, 
+ * dat de verscholen input die bij de andere verstopt zijn automatisch geleegd worden. 
+ * En geen error message meer bij staat, waarom werkt dit niet?
+ * https://chatgpt.com/share/69b7feaf-3b80-8001-b02a-00a44c5321dc
+ */
+// JEPPE heeft mijn function gedebugged
 
+allRadioGemachtigde.forEach(radio => {
+    radio.addEventListener('change', (event) =>{
 
+        inputsAuthorizedPersonInfo.forEach(input => {
+            if(input.name !== radio.value) {
+                input.value = "";
+                 input.classList.remove('input-error')
+                input.removeAttribute('aria-describedby');
 
+            }
+        })
+
+        error.textContent = ""
+    })
+})
 
 
 

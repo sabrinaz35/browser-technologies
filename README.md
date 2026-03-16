@@ -418,6 +418,25 @@ Bij de telefoon moet je bij de dialog scrollen, stel een gebruiker klikt er per 
 Daarnaast is het voor de screenreader beter te begrijpen wat het is, in eerste instantie had ik er een article van gemaakt, maar door dialog te gebruiken herkent de screenreader het ook meteen als een popover element.
 <!-- https://medium.com/@disane1987/better-dialogs-in-html-with-dialog-dde46b4c120d -->
 
+
+##### Wat heb je vandaag gedaan?
+Vandaag ben ik bezig geweest met anchor positioning, wat niet helemaal werkte. Uiteindelijk heb ik daaronder wel een bakckup gevonden, waarbij ik het met @media doe, maar dat is niet de juiste manier om dit te doen.
+
+Uiteindelijk ben ik ook nog bezig geweest met de foutcode die in de kies een van de drie, daar was het geval dat de inputs ingevuld bleven en dat wordt dan uiteindelijk ook meegestuurd en dat is niet de bedoeling. Dus daar heb ik vandaag aan gewerkt.
+
+##### Hoelang heeft dat geduurt?
+- 09:30 - 10:00 Kick-offje en reminder wat de eisen zijn.
+- 10:30 - 12:00 Werken aan de anchor positioning + styling van de popup
+- 12:00 - 13:00 pauze
+- 13:00 - 16:00 werken aan de fout in de kies een van de drie. 
+- 16:00 checkout
+
+##### Wat heb je geleerd?
+- Geleerd hoe ik 
+
+##### Wat ga je morgen doen?
+Morgen ga ik de puntjes op de i zetten en kijken of anchor positioning lukt. En de styling en positionering van de popup en het xje erin fixen en mooier maken.
+
 #### Aanbeveling als ik meer tijd had dan...
 - Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
 - Bij de initialen die zij moeten invullen, de mogelijkheid van het verwijderen van 1 punt weglaten en daar een functie voor schrijven in javascript. 
@@ -467,3 +486,9 @@ Design system NS en fonts:
 Chatgpt:
 Function date picker: 
 https://chatgpt.com/share/69a6d433-8ccc-8001-b362-9685ea865490  
+
+ Bron: Chatgpt
+ Prompt: Ik wil dat als een van de drie radio buttons aangeklikt is, 
+ dat de verscholen input die bij de andere verstopt zijn automatisch geleegd worden. 
+ En geen error message meer bij staat, waarom werkt dit niet?
+ https://chatgpt.com/share/69b7feaf-3b80-8001-b02a-00a44c5321dc
