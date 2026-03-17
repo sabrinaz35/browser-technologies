@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- https://i.pinimg.com/564x/a8/fe/67/a8fe67eced41115e68b7eb2a582c4c4c.jpg -->
+    <link rel="icon" type="image/x-icon" href="/images/image.png" />
     <link rel="stylesheet" href="/styles/style.css" />
     <title>Belastingaangifte erfbelasting</title>
   </head>
@@ -20,6 +22,7 @@
           <!-- https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system  -->
           
           <!-- Vraag 1a -->
+           <!-- Fieldsets zijn toegankelijker bij het groeperen van formulieren -->
           <fieldset>
             <legend class="heading">Persoonsgegevens overledene </legend>
             <div>
@@ -80,7 +83,7 @@
               />
               <!-- https://eye-able.com/nl/blog/aria-label -->
                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog -->
-              <button data-dialog-action="showModal" aria-controls="popover-info" type="button" popovertarget="popover-info" aria-label="Open info popup" aria-expanded="false" aria-haspopup="true" aria-controls="popover-info"><img src="images/cuida_info-outline.png" alt="Meer informatie button"></button>
+              <button data-dialog-action="showModal" aria-controls="popover-info" type="button" popovertarget="popover-info" aria-label="Open info popup" aria-expanded="false" aria-haspopup="true" aria-controls="popover-info"><img src="/images/cuida_info-outline.png" alt="Meer informatie button"></button>
               <dialog popover="manual" id="popover-info">
                 <button type="button" popovertarget="popover-info" popovertargetaction="hide" aria-controls="popover-info">X</button>
                 <h2> Wanneer moet u aangifte erfbelasting doen?</h2>
@@ -89,11 +92,16 @@
                     het overlijden. We sturen de brief naar 1 van de erfgenamen,
                     meestal de partner of het oudste kind van de overledene.
                     De aangifte moet 8 maanden na het overlijden bij ons
-                    binnen zijn. In de brief staat de precieze datum.
+                    binnen zijn. 
+                </p>
+                <p>
+                    In de brief staat de precieze datum.
                     Blijkt uit het testament of een verklaring van erfrecht dat
                     een executeur of een notaris gemachtigd is om de aangifte
                     erfbelasting in te vullen? Dan sturen wij de aangiftebrief
                     naar die gemachtigde.
+                </p>
+                <p>
                     Hebt u geen brief gekregen waarin staat dat u aangifte
                     erfbelasting moet doen? Misschien moet u tóch aangifte
                     doen. Namelijk als u meer erft dan het vrijgestelde bedrag.
@@ -104,8 +112,8 @@
                     erfbelasting binnen 8 maanden na de overlijdensdatum. Dat
                     kan online op Mijn Belastingdienst of met een papieren
                     aangifteformulier. 
-                  </p>
-                </dialog>
+                </p>
+              </dialog>
             </div>
           </fieldset>
 
@@ -137,10 +145,10 @@
 
             <div>
               <fieldset class="hiddenBlock">
-                <legend>
+                <legend class="aangepasteWidth">
                   Hadden de overledene en diens echtgenoot of geregistreerde
                   partner huwelijkse of partnerschapsvoorwaarden laten
-                  vastleggen in een notariële akte?
+                  vastleggen in een notariële akte? <span>*</span>
                 </legend>
                 <label>
                   <input type="radio" name="notarieleAkte" value="no" />
@@ -150,7 +158,7 @@
                   <input type="radio" name="notarieleAkte" value="yes"/>
                   Ja
                 </label>
-                <label for="inputAkte">Voeg hier uw  notariële akte toe</label>
+                <label for="inputAkte">Voeg hier uw  notariële akte toe </label>
                 <input id="inputAkte" type="file">
               </fieldset>
   
@@ -159,7 +167,7 @@
                 <fieldset>
                   <legend>
                     Hadden de overledene en diens partner een finaal
-                    verrekenbeding?
+                    verrekenbeding?<span>*</span>
                   </legend>
                   <label>
                     <input 
@@ -174,7 +182,7 @@
                 </fieldset>
 
                 <label for="dateMarriage"
-                  >Datum huwelijkse of partnerschapsvoorwaarden</label
+                  >Datum huwelijkse of partnerschapsvoorwaarden <span>*</span></label
                 >
                 <input type="date" id="dateMarriage" value="2026-03-02"/>
               </div>
@@ -204,7 +212,7 @@
               <fieldset class="hiddenBlock">
                 <legend>
                 Is 1 van deze kinderen eerder overleden dan de overledene voor
-                wie u nu aangifte doet?
+                wie u nu aangifte doet? <span>*</span>
                  </legend>
                   <label>
                     <input type="radio" name="overledenKindAangifte" value="no"/>
@@ -218,7 +226,7 @@
 
               <div>
                 <fieldset class="hiddenBlock" >
-                  <legend>Had dit overleden kind zelf kinderen?</legend>
+                  <legend>Had dit overleden kind zelf kinderen?<span>*</span></legend>
                   <label>
                     <input type="radio" name="overledenKindZelfKinderen" value="no"/>
                     Nee
@@ -236,7 +244,7 @@
           <fieldset>
             <legend class="heading">Testament van overledene</legend>
             <fieldset class="hiddenBlock">
-              <legend>Had de overledene een testament?</legend>
+              <legend>Had de overledene een testament? <span>*</span></legend>
               <label>
                 <input 
                 required
@@ -253,19 +261,19 @@
             <div>
               <fieldset>
                 <legend>Vul de gegevens in van de notaris die het testament heeft
-                opgemaakt en de datum van het testament.</legend>
-                <label for="protocolNumberNotary">Protocolnummer Notaris</label>
+                opgemaakt en de datum van het testament. </legend>
+                <label for="protocolNumberNotary">Protocolnummer Notaris <span>*</span></label>
                 <input type="text" id="protocolNumberNotary"/>
-                <label for="firstnameNotary"> Voorletter(s) </label>
+                <label for="firstnameNotary"> Voorletter(s)<span>*</span> </label>
                 <input required type="text" name="firstnameNotary" id="firstnameNotary" />
                 <label for="prefixNotary"> Tussenvoegsel(s) </label>
                 <input type="text" name="prefixNotary" value="" id="prefixNotary" />
-                <label for="lastnameNotary"> Achternaam </label>
+                <label for="lastnameNotary"> Achternaam <span>*</span></label>
                 <input required type="text" name="lastnameNotary" id="lastnameNotary" />
-                <label for="locationNotary">Vestigingsplaats</label>
+                <label for="locationNotary">Vestigingsplaats <span>*</span></label>
                 <input type="text" name="locationNotary" id="locationNotary" />
                 <label for="willLastAmendment"
-                  >Datum van het testament of van de laatste wijziging
+                  >Datum van het testament of van de laatste wijziging<span>*</span>
                 </label>
                 <input type="date" name="willLastAmendment" id="willLastAmendment" value="2026-03-02"/>
               </fieldset>
@@ -398,14 +406,14 @@
               <legend>Adres in Nederland</legend>
               <fieldset>
                 <legend>Vul de gegevens in als je in Nederland woont</legend>
-                <label for="streetNameAuthorizedPerson">Straat</label>
+                <label for="streetNameAuthorizedPerson">Straat<span>*</span></label>
                 <input
                   type="text"
                   name="straatNaamGemachtigde"
                   id="streetNameAuthorizedPerson"
                   
                 />
-                <label for="houseNumberAuthorizedPerson">Huisnummer</label>
+                <label for="houseNumberAuthorizedPerson">Huisnummer<span>*</span></label>
                 <input
                   type="text"
                   name="huisnummergemachtigde"
@@ -419,7 +427,7 @@
                   name="toevoegingAdresGemachtigde"
                   id="additionalAdressAuthorizedPerson"
                 />
-                <label for="postalcodeAuthorizedPerson">Postcode</label>
+                <label for="postalcodeAuthorizedPerson">Postcode<span>*</span></label>
                <!-- https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code -->
                 <input
                   pattern="^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$"
@@ -428,7 +436,7 @@
                   id="postalcodeAuthorizedPerson"
                 />
                  <p class="errorMemo">Sorry, je postcode moet voldoen aan het volgende format 1000AA</p>
-                <label for="locationAuthorizedPerson">Woonplaats</label>
+                <label for="locationAuthorizedPerson">Woonplaats<span>*</span></label>
                 <input
                   type="text"
                   name="plaatsGemachtigde"
@@ -441,26 +449,26 @@
               <legend>Adres in Buitenland</legend>
               <fieldset>
                 <legend>Vul de gegevens in als je in Buitenland woont</legend>
-                <label for="streetNameAuthorizedPersonAbroad">Straat</label>
+                <label for="streetNameAuthorizedPersonAbroad">Straat<span>*</span></label>
                 <input
                   type="text"
                   name="straatNaamGemachtigdeBuitenland"
                   id="streetNameAuthorizedPersonAbroad"
                 />
-                <label for="housenumberAuthorizedAbroad">Huisnummer</label>
+                <label for="housenumberAuthorizedAbroad">Huisnummer<span>*</span></label>
                 <input
                   type="text"
                   name="huisnummergemachtigdeBuitenland"
                   id="housenumberAuthorizedAbroad"
                 />
 
-                <label for="postcodeAuthorizedAbroad">Postcode</label>
+                <label for="postcodeAuthorizedAbroad">Postcode<span>*</span></label>
                 <input
                   type="text"
                   name="postcodeGemachtigdeBuitenland"
                   id="postcodeAuthorizedAbroad"
                 />
-                <label for="locationAuthorizedPersonAbroad">plaats</label>
+                <label for="locationAuthorizedPersonAbroad">Plaats<span>*</span></label>
                 <input
                   type="text"
                   name="plaatsGemachtigdeBuitenland"
@@ -473,13 +481,13 @@
                   id="landcodeAuthorizedPersonAbroad"
                 />
               </fieldset>
-              <label for="telnumberAuthorizedPerson">Telefoonnummer</label>
+              <label for="telnumberAuthorizedPerson">Telefoonnummer<span>*</span></label>
               <input
                 type="tel"
                 name="telefoonNummerGemachtigde"
                 id="telnumberAuthorizedPerson"
               />
-              <label for="emailadresAuthorizedPerson">E-mailadress</label>
+              <label for="emailadresAuthorizedPerson">E-mailadress<span>*</span></label>
               <input
                 type="email"
                 name="emailadresGemachtigde"
@@ -492,6 +500,6 @@
       </form>
     </main>
     <footer></footer>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

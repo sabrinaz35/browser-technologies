@@ -82,10 +82,9 @@
 
 /**************************************/
 /* MARK: Generieke code die herbruikbaar is */
-/**************************************/
-/* De animatie moet nog gefinetuned worden */
+
+/* Gebruik gemaakt van een opacity voor fijnere UX */
 .hiddenBlock + div {
-  /* display: none; */
   display: flex;
   flex-direction: column;
   height: 0;
@@ -95,11 +94,10 @@
   /* Ik zet het blok hier helemaal weg, zodat hij niet 
   bij de volgende fieldset van de gemachtigde in de weg 
   zit */
-  margin-left: -100rem;
+  margin-left: -300rem;
 }
 
-.hiddenBlock:has([value="yes"]:checked) + div {
-  /* display: block; */
+.hiddenBlock:has([value="yes"]:checked) + div{
   height: auto;
   opacity: 1;  
   transition: opacity 0.5s ease;
@@ -124,7 +122,7 @@ input:user-invalid + .errorMemo {
 /**************************************/
 /*   MARK: keuze vraag         */
 /**************************************/
-/* Bsn, protocolnummer en beconnummer code */
+/* Bsn, protocolnummer en beconnummer code voor keuze maken */
 .hiddenRadio {
   margin-bottom: 0;
 }
@@ -169,7 +167,6 @@ input:user-invalid + .errorMemo {
 /**************************************/
 /*   MARK: Invalid en valid styling   */
 /**************************************/
-
 input:user-invalid {
   border-color: var(--error-color);
 }
@@ -261,6 +258,10 @@ fieldset {
     align-self: center;
   }
 
+  .aangepasteWidth {
+    width: 95%;
+  }
+
   input {
     background-color: var(--background-color-input);
     border: solid 1px var(--color-border-default);
@@ -277,6 +278,10 @@ fieldset {
 
     &[type="file"] {
       margin-top: var(--spacing-gap-m);
+    }
+
+    &[type="date"]{
+      width: 25%;
     }
 
     &::focus {
@@ -359,12 +364,12 @@ button:not([popovertarget="popover-info"]), input[type="file"]::file-selector-bu
 /* MARK: Styling popup */
 dialog {
   padding: var(--padding-insert-m);
-  margin: 8rem 10px 0rem 3rem;
+  margin: 8rem 10px 0rem 8rem;
   border-radius: var(--border-radius-large);
   border-color: var(--color-border-default);
   box-shadow: var(--shadow-elevated-2);
 
-  max-width: 30rem;
+  max-width: 25rem;
   max-height: 24rem;
 
 /* https://developer.chrome.com/docs/css-ui/anchor-positioning-api?hl=nl */
@@ -383,6 +388,10 @@ dialog {
       color: var(--heading-color);
       font-size: var(--heading-2-web);
       margin-bottom: var(--padding-insert-s);
+    }
+
+    p {
+      margin-top:var(--spacing-gap-m);
     }
 }
 

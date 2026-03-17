@@ -54,19 +54,15 @@ function addRequired(event){
 
     console.log(nextDivInput)
 
-    // nextDivInput.setAttribute('required');
-
       if(previousRadioPushed.value === "yes") {
         nextDivInput.setAttribute("required","");
+
         } else {
             nextDivInput.removeAttribute("required","");
-        }
 
-    
+        }
     console.log(previousRadioPushed); 
 }
-
-
 
 
 // MARK: Datum vandaag
@@ -99,8 +95,6 @@ function setCurrentDateToPicker(){
 setCurrentDateToPicker()
 
 
-
-
 //MARK: Generieke code voor de hoofdletters van de initialen
 // Validation om te kijken of de initialen in hoofdletters geschreven worden bij initialen
 // https://stackoverflow.com/questions/1027224/how-can-i-test-if-a-letter-in-a-string-is-uppercase-or-lowercase-using-javascrip 
@@ -114,9 +108,8 @@ initialsInputs.forEach(input => {
 
     // https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/inputType
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-    //Dus als er op backspace geklikt wordt dan moet de code weg
-    if (event.inputType === 'deleteContentBackward') {
-        input.value = input.value.slice(0, -1);
+    if (event.inputType === 'deleteContentBackward') { //Dus als er op backspace geklikt wordt dan moet de code weg
+        input.value = input.value.slice(0, -1); //Hierbij heb ik ook hulp gehad van Romy
         return;
     } 
 })
@@ -131,7 +124,7 @@ const error = document.querySelector('.error-hidden');
 const allRadioGemachtigde = document.querySelectorAll('input[name="authorizedPersonInfo"]');
 
 // Error meldingen met javascript voor de gegevens van gemachtigde
-// Om toch een andere manier te kunnen laten zien
+// Om toch een andere manier het valideren kunnen laten zien en dat dit ook mogelijk is
 inputsAuthorizedPersonInfo.forEach(input => {
     input.addEventListener('blur', (event) => {
 
@@ -161,8 +154,7 @@ inputsAuthorizedPersonInfo.forEach(input => {
  * En geen error message meer bij staat, waarom werkt dit niet?
  * https://chatgpt.com/share/69b7feaf-3b80-8001-b02a-00a44c5321dc
  */
-// JEPPE heeft mijn function gedebugged
-
+// JEPPE heeft mijn function gedebugged 
 allRadioGemachtigde.forEach(radio => {
     radio.addEventListener('change', (event) =>{
 
@@ -178,13 +170,3 @@ allRadioGemachtigde.forEach(radio => {
         error.textContent = ""
     })
 })
-
-
-
-
-
-
-
-
-
-

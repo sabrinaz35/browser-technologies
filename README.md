@@ -438,11 +438,24 @@ Uiteindelijk ben ik ook nog bezig geweest met de foutcode die in de kies een van
 ##### Wat ga je morgen doen?
 Morgen ga ik de puntjes op de i zetten en kijken of anchor positioning lukt. En de styling en positionering van de popup en het xje erin fixen en mooier maken.
 
+### Maandag 17 maart
+#### Proces vandaag
+Vandaag ben ik de laatste puntjes op die I gaan zetten en heb gekeken naar de positie van de popover. 
+
+<img src="/readme-images/popover-styling.png" alt="popover positie oud" width="300px">
+
+Uiteindelijk heb ik de positie iets meer naar rechts gezet, zodat het mooier staat, bovendien wil ik dat de input fields nog wel toegankelijk zijn en je deze nog kan invullen ondanks dat de popover in beeld is.
+
+Ook liep ik tegen een aantal andere dingen aan, dat bepaalde radio's niet meer werkte dit komt mogelijk door de progressive disclosure die ik niet ver genoeg uit beeld heb gezet, maar dat heb ik opgelost door dat nu wel nog verder te zetten en nu werkt alles.
+
+
 #### Aanbeveling als ik meer tijd had dan...
 - Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
 - Bij de initialen die zij moeten invullen, de mogelijkheid van het verwijderen van 1 punt weglaten en daar een functie voor schrijven in javascript. 
 - Bij meer inputs een pattern toevoegen in de html
 - Meer inlezen op anchor positioning, zodat dat werkt en ik niet een mediaquerie hoef te gebruiken, zo blijft de code schoner en is het voor de gebruiker fijner werken. 
+- De span die ik nu inline heb gebruikt generiek maken met javascript, dat als hij een element required heeft dat dan de span erin komt te staan, ik heb er nu voor gekozen om get binnen html te doen, omdat als alles uitvalt het er alsnog in staat en zo wel voldoet aan de progressive enhancement.
+- 
 
 
 ## Bronvermelding
@@ -451,7 +464,6 @@ Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.
 ### Html bronnen
 Voor html inputs:
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input 
-
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date 
 
 Html postcode pattern:
@@ -473,6 +485,8 @@ Design system NS en fonts:
 - https://www.figma.com/community/plugin/1498729606631593833/iconify-icons-library --> Via figma gebruikt voor het icoontje
 - https://css-tricks.com/form-validation-ux-html-css/ 
 - https://developer.chrome.com/docs/css-ui/anchor-positioning-api?hl=nl + hulp van Vasilis
+
+- https://i.pinimg.com/564x/a8/fe/67/a8fe67eced41115e68b7eb2a582c4c4c.jpg 
 
 ### Geraadpleegde site voor Javascript:
 - https://stackoverflow.com/questions/9887360/how-can-i-check-if-a-checkbox-is-checked 
