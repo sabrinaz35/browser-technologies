@@ -451,14 +451,25 @@ Ook liep ik tegen een aantal andere dingen aan, dat bepaalde radio's niet meer w
 Vandaag heb ik de checkout met Thomas gedaan.
 ##### Wat heb je vandaag gedaan?
 - Anchor positioning uitgeprobeerd en aan sanne gevraagd hoe dat zit.
+- Uiteindelijk is de anchor positioning opgelost en gefixt
+- De stijling van de popup nog even verder gedaan
+- Wat kleine dingetjes zoals, kijken of niet alles verspringt ineens.
 
+Verder heb ik vandaag ook wat gezeten aan css.
 
 ##### Hoelang heeft dat geduurt?
-
+- 09:30 - 12:00 Verder werken met browsertech
+- 12:00 - 13:00 pauze
+- 13:00 - 15:30 werken aan css
+- 15:30 - 16:00 Samen met sanne gekeken naar de anchor positioning en gefixt.
+- 16:00 checkout
 
 ##### Wat heb je geleerd?
+Ik heb geleerd dat de anchor positioning nog best een dingetje is. Je moet heel goed bedenken wat er staat zoals: bottom:anchor(--anchor-info-popup top); 
+Dat is dan bottom van de dialog in mijn geval wat uieindelijk aan de bovenkant van het geankerde element moet komen te staan. Als je er te lang naar keek snapte ik er ook niet veel meer van.
 
 ##### Wat ga je morgen doen?
+Nog even een laatste rondje door de site en eventuele aanbevelingen/ als ik meer tijd had schrijven en verder werken aan css.
 
 #### Aanbeveling als ik meer tijd had dan...
 - Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
