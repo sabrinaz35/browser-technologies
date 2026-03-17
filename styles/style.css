@@ -360,11 +360,16 @@ button:not([popovertarget="popover-info"]), input[type="file"]::file-selector-bu
 }
 
 
+fieldset:nth-of-type(1) > fieldset input:nth-of-type(1) {
+  anchor-name: --anchor-info-input;
+  position: relative;
+}
 
 /* MARK: Styling popup */
 dialog {
   padding: var(--padding-insert-m);
-  margin: 8rem 10px 0rem 8rem;
+  /* margin: 8rem 10px 0rem 8rem; */
+  margin-inline-end:2em; 
   border-radius: var(--border-radius-large);
   border-color: var(--color-border-default);
   box-shadow: var(--shadow-elevated-2);
@@ -373,13 +378,23 @@ dialog {
   max-height: 24rem;
 
 /* https://developer.chrome.com/docs/css-ui/anchor-positioning-api?hl=nl */
-  position: absolute;
+  position: fixed;
   position-anchor: --anchor-info-popup;
-  position-area: top right;
+  /* position-area: top right; */
+
+  bottom:anchor(top);
+  left:anchor(--anchor-info-input right);
+    /* max( */
+      
+      /* ) */
+      /* ; */
+  align-self: end;
+  /* position-area:right; */
   /* right: anchor(center); */
-  /* top: anchor(center);
-  position-try-fallbacks: flip-block;
-  position-visibility: anchors-visible; */
+  /* top: anchor(center); */
+  /* position-try-fallbacks: --smallscreen ; */
+  /* position-visibility: anchors-visible; */
+  /* inset:0; */
 
 
 
@@ -419,13 +434,11 @@ dialog {
 
 
   @position-try --smallscreen {
-  /* position-area: top center; */
-  /* right: anchor(bottom); */
-  /* width: 10rem; */
+    position-area: top;
   }
 
 
-@media (width< 500px) {
+/* @media (width< 500px) {
   dialog {
       margin: 32px 32px 4rem 32px;
       position-area: top center;
@@ -446,4 +459,4 @@ dialog {
     position-anchor: --anchor-info-popup;
     position-area: top right;
   }
-}
+} */

@@ -448,6 +448,17 @@ Uiteindelijk heb ik de positie iets meer naar rechts gezet, zodat het mooier sta
 
 Ook liep ik tegen een aantal andere dingen aan, dat bepaalde radio's niet meer werkte dit komt mogelijk door de progressive disclosure die ik niet ver genoeg uit beeld heb gezet, maar dat heb ik opgelost door dat nu wel nog verder te zetten en nu werkt alles.
 
+Vandaag heb ik de checkout met Thomas gedaan.
+##### Wat heb je vandaag gedaan?
+- Anchor positioning uitgeprobeerd en aan sanne gevraagd hoe dat zit.
+
+
+##### Hoelang heeft dat geduurt?
+
+
+##### Wat heb je geleerd?
+
+##### Wat ga je morgen doen?
 
 #### Aanbeveling als ik meer tijd had dan...
 - Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
