@@ -360,9 +360,11 @@ button:not([popovertarget="popover-info"]), input[type="file"]::file-selector-bu
 }
 
 
-fieldset:nth-of-type(1) > fieldset input:nth-of-type(1) {
+fieldset:nth-of-type(1) > fieldset div:last-of-type input:nth-of-type(1) {
   anchor-name: --anchor-info-input;
   position: relative;
+
+  background-color: red;
 }
 
 /* MARK: Styling popup */
@@ -379,11 +381,11 @@ dialog {
 
 /* https://developer.chrome.com/docs/css-ui/anchor-positioning-api?hl=nl */
   position: fixed;
-  position-anchor: --anchor-info-popup;
-  /* position-area: top right; */
+  position-anchor: --anchor-info-input;
+  position-area: right;
 
-  bottom:anchor(top);
-  left:anchor(--anchor-info-input right);
+  /* bottom:anchor(--anchor-info-popup top); */
+  /* left:anchor(--anchor-info-input right); */
     /* max( */
       
       /* ) */
