@@ -471,7 +471,32 @@ Dat is dan bottom van de dialog in mijn geval wat uieindelijk aan de bovenkant v
 ##### Wat ga je morgen doen?
 Nog even een laatste rondje door de site en eventuele aanbevelingen/ als ik meer tijd had schrijven en verder werken aan css.
 
-#### Aanbeveling als ik meer tijd had dan...
+### Wekelijkse reflectie 18 maart: Eindreflectie
+#### Reflectie op proces
+Voor dit vak zette we de erfbelasting formulier van de belastingdienst om naar een digitaal werkend prototype in de huisstijl van de ns. Waarbij ik de patterns, ga dan naar..., informatie blokje, en kies een van de drie gedaan heb.
+
+##### UX elementen
+Ik ben blij met wat ik in die korte tijd neer heb kunnen zetten en heb toffe dingen geleerd wat ik niet verwacht had dat mij zou lukken voorafgaand aan deze opdracht. Ik heb met een ontwerpersblik kunnen kijken en gedacht aan toegankelijkheid alleen hier kwam toch meer bij kijken dan ik dacht en heb daarom mijn focus wat meer gelegd op de UX van mijn formulier.
+- Zo heb ik de sterretjes toegevoegd als indicatie dat die velden required zijn.
+- Ik heb passende errormessages geschreven als foutmelding.
+- Bij de progressive disclosure heb ik de keuze gemaakt om voor een animatie te gaan, alleen dit gaat wel helaas ten koste van de toegankelijkheid van de screenreader. Ik heb nog naar de opties gekeken of ik iets met de tabindex of nog een hidden element kon toevoegen, maar dat lukte niet.
+- De voorletters en initialen veranderen automatisch naar hoofdletters
+- Bij de datumpicker van de overlijdensdatum kan je niet verder vooruit en ook niet langer dan acht maanden terug (dit is op basis van de dag van vandaag gedaan met javascript.)
+
+##### Waar ben ik trots op?
+Al deze extra elementen die ik toegeveogd heb ben ik best wel trots op, een van mijn leerdoelen was ook om meer te gaan doen met javascript en ook daadwerkelijk snappen wat ik aan het doen ben en dat is gelukt. 
+
+En ik ben trots op de progressive disclosure, dit is generiek gemaakt met css en daarom past dit perfect in de progressive enhancement van dit formulier.
+
+##### Wat ging minder goed?
+Wat minder goed ging was soms de functies schrijven in javascript, ik vind het nog lasig om zoiets te debuggen en ik liep daar soms wel vaak tegenaan, omdat ik niet goed weet hoe ik dat het beste kan doen en wat ik dan bijvoorbeeld in de consol.log kan zetten.
+
+Ook vond ik het lastig om verschillende keuzes te maken op gebied van ux, misschien had ik dan ook beter de keuze kunnen maken om wat meer te vragen aan de mensen om mij heen. Dar is een goeie leer voor de volgende keer.
+
+Als laatste 
+
+
+##### Aanbeveling als ik meer tijd had dan...
 - Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
 - Bij de initialen die zij moeten invullen, de mogelijkheid van het verwijderen van 1 punt weglaten en daar een functie voor schrijven in javascript. 
 - Bij meer inputs een pattern toevoegen in de html
