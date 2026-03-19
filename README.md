@@ -475,26 +475,59 @@ Nog even een laatste rondje door de site en eventuele aanbevelingen/ als ik meer
 #### Reflectie op proces
 Voor dit vak zette we de erfbelasting formulier van de belastingdienst om naar een digitaal werkend prototype in de huisstijl van de ns. Waarbij ik de patterns, ga dan naar..., informatie blokje, en kies een van de drie gedaan heb.
 
+<img src="/readme-images/final-product.png" alt="Final product" width="300px">
+
 ##### UX elementen
 Ik ben blij met wat ik in die korte tijd neer heb kunnen zetten en heb toffe dingen geleerd wat ik niet verwacht had dat mij zou lukken voorafgaand aan deze opdracht. Ik heb met een ontwerpersblik kunnen kijken en gedacht aan toegankelijkheid alleen hier kwam toch meer bij kijken dan ik dacht en heb daarom mijn focus wat meer gelegd op de UX van mijn formulier.
 - Zo heb ik de sterretjes toegevoegd als indicatie dat die velden required zijn.
+
+<img src="/readme-images/sterretje.png" alt="sterretje" width="300px">
+
 - Ik heb passende errormessages geschreven als foutmelding.
+
+<img src="/readme-images/error-message-final.png" alt="error message" width="300px">
+
 - Bij de progressive disclosure heb ik de keuze gemaakt om voor een animatie te gaan, alleen dit gaat wel helaas ten koste van de toegankelijkheid van de screenreader. Ik heb nog naar de opties gekeken of ik iets met de tabindex of nog een hidden element kon toevoegen, maar dat lukte niet.
+
+<img src="/readme-images/progressive-disclosure-1.png" alt="ingeklapt" width="300px">
+<img src="/readme-images/progressive-disclosure-2.png" alt="uitgeklapt" width="300px">
+
 - De voorletters en initialen veranderen automatisch naar hoofdletters
+
+<img src="/readme-images/initialen-hoofdletters.png" alt="initialen hoofletters" width="300px">
+
 - Bij de datumpicker van de overlijdensdatum kan je niet verder vooruit en ook niet langer dan acht maanden terug (dit is op basis van de dag van vandaag gedaan met javascript.)
+
+<img src="/readme-images/datepicker-vandaag.png" alt="date picker huidige datum en niet verder" width="300px">
+
+<img src="/readme-images/date-picker-8.png" alt="date picker 8 maanden terug" width="300px">
+
+- Een responsive werkende information dialog, zodat de gebruiker nog de gegevens in kan vullen als de informatie in beeld staat. Ze kunnen het handmatig via de x weer inklappen, maar het maakt dan niet uit als ze het vergeten te doen en al verder zijn in het proces
+
+<img src="/readme-images/dialog.png" alt="date picker 8 maanden terug" width="300px">
+ 
+Mocht de gebruiker bij een volfende popup komen, dan vervangt die deze die nu in beeld staat. Zodat en niet alles open staat en verwarring bij de gebruiker te kunnen komen.
+
 
 ##### Waar ben ik trots op?
 Al deze extra elementen die ik toegeveogd heb ben ik best wel trots op, een van mijn leerdoelen was ook om meer te gaan doen met javascript en ook daadwerkelijk snappen wat ik aan het doen ben en dat is gelukt. 
 
 En ik ben trots op de progressive disclosure, dit is generiek gemaakt met css en daarom past dit perfect in de progressive enhancement van dit formulier.
 
+Ook ben ik trots op de functionaliteit dat als je de progressive disclosure inklapt dat de gegevens wat ingevuld waren geleegd worden, voor een betere UX
+
+
 ##### Wat ging minder goed?
 Wat minder goed ging was soms de functies schrijven in javascript, ik vind het nog lasig om zoiets te debuggen en ik liep daar soms wel vaak tegenaan, omdat ik niet goed weet hoe ik dat het beste kan doen en wat ik dan bijvoorbeeld in de consol.log kan zetten.
 
 Ook vond ik het lastig om verschillende keuzes te maken op gebied van ux, misschien had ik dan ook beter de keuze kunnen maken om wat meer te vragen aan de mensen om mij heen. Dar is een goeie leer voor de volgende keer.
 
-Als laatste 
+Als laatste ging de anchor positioning niet heel goed, dit is een vrij nieuw element en het is handig als het werkt. Alleen dat wilde het in eerste instantie niet. Ik had een backup geschreven met mediaqueries, maar uieindelijk is het toch wel gelukt met behulp van Sanne.
 
+<img src="/readme-images/backup-anchor.png" alt="backup-code anchor positioning" width="300px">
+
+<img src="/readme-images/uiteindelijke-code-anchor.png" alt="anchor positioning" width="300px">
+ 
 
 ##### Aanbeveling als ik meer tijd had dan...
 - Een functionaliteit/oplossing vinden voor het tabben, dat de onzichtbare dingen overgeslagen worden.
@@ -502,8 +535,7 @@ Als laatste
 - Bij meer inputs een pattern toevoegen in de html
 - Meer inlezen op anchor positioning, zodat dat werkt en ik niet een mediaquerie hoef te gebruiken, zo blijft de code schoner en is het voor de gebruiker fijner werken. 
 - De span die ik nu inline heb gebruikt generiek maken met javascript, dat als hij een element required heeft dat dan de span erin komt te staan, ik heb er nu voor gekozen om get binnen html te doen, omdat als alles uitvalt het er alsnog in staat en zo wel voldoet aan de progressive enhancement.
-- 
-
+- OOk zou ik bij de popup nog een funcionaliteit willen toevoegen waarbij als er een nieuwe geopend wordt dat deze de oude dan vervangt, ik had te weinig tijd om dit er nog aan toe te voegen.
 
 ## Bronvermelding
 Uiteraard zijn Sanne en Vasilis ook wederom weer mijn bronnen geweest.

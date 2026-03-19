@@ -178,7 +178,7 @@ input:user-valid {
 input[type="text"]:user-valid {
   /* https://www.figma.com/community/plugin/1498729606631593833/iconify-icons-library */
   /* https://css-tricks.com/form-validation-ux-html-css/ */
-  background: url(/images/iets-icons_check-fill.png);
+  background: url(images/iets-icons_check-fill.png);
   background-size: 20px;
   background-repeat: no-repeat;
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position */
@@ -187,7 +187,7 @@ input[type="text"]:user-valid {
 
 input[type="text"]:user-invalid {
   /* https://www.figma.com/community/plugin/1498729606631593833/iconify-icons-library */
-  background: url(/images/mdi_cross-circle.png);
+  background: url(images/mdi_cross-circle.png);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: right 10px center;
